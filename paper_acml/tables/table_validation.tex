@@ -3,12 +3,12 @@
 Protocol & Feature set & Model & Mean RMSE & Mean R2 & Folds \\
 \midrule
 Leave-one-crop-out & Operational & Ridge & 0.731 & 0.520 & 5 \\
-Leave-one-crop-out & Weather+Anom+Soil & Ridge & 1.071 & 0.067 & 5 \\
+Leave-one-crop-out & Weather+Dev+Soil & Ridge & 1.071 & 0.067 & 5 \\
 Leave-one-region-out & Operational & Ridge & 0.823 & -0.356 & 6 \\
-Leave-one-region-out & Weather+Anom+Soil & LightGBM & 0.974 & -0.285 & 6 \\
+Leave-one-region-out & Weather+Dev+Soil & LightGBM & 0.974 & -0.285 & 6 \\
 Rolling-origin & Operational & Ridge & 0.516 & 0.698 & 3 \\
-Rolling-origin & Weather+Anom+Soil & LightGBM & 0.578 & 0.631 & 3 \\
-Held-out test years & Operational & Ridge & 0.716 & 0.679 & 1 \\
-Held-out test years & Weather+Anom+Soil & LightGBM & 0.963 & 0.420 & 1 \\
+Rolling-origin & Weather+Dev+Soil & LightGBM & 0.578 & 0.631 & 3 \\
+Held-out test years, all-window mean & Operational & Ridge & 0.716 & 0.679 & 1 \\
+Held-out test years, all-window mean & Weather+Dev+Soil & LightGBM & 0.963 & 0.420 & 1 \\
 \bottomrule
 \end{tabular}

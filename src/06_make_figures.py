@@ -7,6 +7,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
 
 from common import configured_path, ensure_output_dirs, load_config, write_markdown
 
@@ -23,31 +24,57 @@ def window_order(config: dict) -> dict[str, int]:
 
 
 def figure_framework(config: dict) -> None:
-    fig, ax = plt.subplots(figsize=(10, 3.6))
+    fig, ax = plt.subplots(figsize=(10.6, 4.4))
+
+    def box(x: float, y: float, w: float, h: float, title: str, body: str, color: str) -> None:
+        patch = FancyBboxPatch(
+            (x, y),
+            w,
+            h,
+            boxstyle="round,pad=0.015,rounding_size=0.025",
+            linewidth=1.1,
+            edgecolor="#1f2933",
+            facecolor=color,
+        )
+        ax.add_patch(patch)
+        ax.text(x + w / 2, y + h - 0.08, title, ha="center", va="top", fontsize=10, fontweight="bold", color="#102a43")
+        ax.text(x + w / 2, y + h / 2 - 0.08, body, ha="center", va="center", fontsize=8.8, color="#243b53", linespacing=1.25)
+
+    boxes = [
+        (0.04, 0.44, 0.20, 0.34, "Inputs at cutoff", "Daily weather to cutoff\n+ soil background\n+ crop-region identity", "#e6f4f1"),
+        (0.29, 0.44, 0.20, 0.34, "Stage windows", "May-Jun, May-Jul,\nMay-Aug, May-Sep,\nMay-Oct", "#fff3bf"),
+        (0.54, 0.44, 0.20, 0.34, "Model regimes", "History-free weather-soil\nOperational with\nlagged yield", "#e8f0fe"),
+        (0.79, 0.44, 0.17, 0.34, "Monitoring output", "Yield forecast\nRisk score\nInterval\nWatch list", "#fde2e1"),
+    ]
+    for args in boxes:
+        box(*args)
+
+    for x0, x1 in [(0.24, 0.29), (0.49, 0.54), (0.74, 0.79)]:
+        ax.annotate("", xy=(x1 - 0.01, 0.61), xytext=(x0 + 0.01, 0.61), arrowprops={"arrowstyle": "->", "lw": 1.6, "color": "#334e68"})
+
     months = ["May", "Jun", "Jul", "Aug", "Sep", "Oct"]
-    x = np.arange(len(months))
-    ax.plot(x, np.zeros_like(x), color="#2f6f73", linewidth=3)
-    ax.scatter(x, np.zeros_like(x), s=160, color="#f2c14e", edgecolor="#1f2933", zorder=3)
-    for i, month in enumerate(months):
-        ax.text(i, 0.15, month, ha="center", va="bottom", fontsize=11, fontweight="bold")
+    x = np.linspace(0.12, 0.88, len(months))
+    ax.plot(x, np.full_like(x, 0.22), color="#2f6f73", linewidth=2.2)
+    ax.scatter(x, np.full_like(x, 0.22), s=90, color="#f2c14e", edgecolor="#1f2933", zorder=3)
+    for xi, month in zip(x, months):
+        ax.text(xi, 0.29, month, ha="center", va="bottom", fontsize=9.5, fontweight="bold")
     for window in config["forecast_windows"]:
         end = int(window["end_month"]) - 5
-        ax.annotate(
-            window["name"],
-            xy=(end, 0),
-            xytext=(end, -0.38 - 0.06 * end),
-            ha="center",
-            arrowprops={"arrowstyle": "->", "color": "#334e68"},
-            fontsize=9,
-        )
+        xi = x[end]
+        ax.plot([xi, xi], [0.20, 0.13], color="#52606d", linewidth=0.8)
+        ax.text(xi, 0.10, window["name"], ha="center", va="top", fontsize=8)
+
     ax.text(
-        2.5,
-        0.55,
-        "Partial-season daily weather indicators feed probabilistic yield-shortfall risk models",
+        0.5,
+        0.02,
+        "Use case: state-level monitoring, procurement review, and drought-preparedness screening; not farm-level or automatic policy action.",
         ha="center",
-        fontsize=11,
+        va="bottom",
+        fontsize=8.6,
+        color="#334e68",
     )
-    ax.set_ylim(-1.0, 1.0)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
     ax.set_axis_off()
     save(fig, configured_path(config, "figures_dir") / "fig01_framework_timeline.png")
 

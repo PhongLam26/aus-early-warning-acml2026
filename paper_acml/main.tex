@@ -48,7 +48,7 @@
 \maketitle
 
 \begin{abstract}
-Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a history-free weather-soil setting from a history-enhanced operational setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best history-free May-Oct model reaches RMSE 0.889 t/ha and R2 0.507, while the best operational May-Oct model reaches RMSE 0.658 t/ha and R2 0.730. Ablation, stress validation, risk classification, and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
+Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a history-free weather-soil setting from a history-enhanced operational setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best history-free May-Oct model reaches RMSE 0.889 t/ha and R2 0.507, while the best operational May-Oct model reaches RMSE 0.658 t/ha and R2 0.730. Ablation and historical baselines show that weather and soil provide measurable but secondary monitoring information; persistent crop-region structure and lagged yield history account for much of the strongest operational skill. Risk classification and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
 \end{abstract}
 
 \begin{keywords}
@@ -61,9 +61,9 @@ Australian dryland grain systems face recurring climate risks, including rainfal
 
 This paper studies state-level early warning for Australian winter crops. The task is to predict yield and low-yield shortfall risk for each region, crop, harvest year, and forecast window. Unlike a post-hoc anomaly attribution or multi-method XAI study, the central question is operational timing: how early can yield-shortfall risk be monitored? A May-Jun estimate supports early monitoring, while a May-Oct estimate approaches a full-season pre-harvest assessment. This framing is aligned with recent early-warning work that emphasizes anticipatory crop-failure monitoring rather than post-season diagnosis alone \citep{anderson2024preseasonWarning}.
 
-The empirical design is intentionally conservative. We remove production and area variables from the main predictors, compute anomaly baselines from training years only, and keep the 2017--2021 test period outside all scaling, thresholding, calibration, and residual estimation steps. This avoids turning post-harvest information into apparent forecast skill.
+The empirical design is intentionally conservative. We remove production and area variables from the main predictors, compute expected-yield and weather-deviation baselines from training years only, and keep the 2017--2021 test period outside all scaling, thresholding, calibration, and residual estimation steps. This avoids turning post-harvest information into apparent forecast skill.
 
-The main contribution is a stage-aware framework that separates two claims that are often mixed. First, a history-free weather-soil model tests whether daily weather, weather anomalies, and soil background provide scientific evidence for early warning. Second, an operational model adds lagged yield history to quantify how much forecast quality improves when historical production memory is allowed. This distinction matters because a strong operational forecast may partly reflect persistent crop-region productivity rather than purely within-season weather signal.
+The main contribution is a stage-aware framework that separates two claims that are often mixed. First, a history-free weather-soil model tests whether daily weather, train-derived weather deviations, and soil background provide scientific evidence for early warning. Second, an operational model adds lagged yield history to quantify how much forecast quality improves when historical production memory is allowed. This distinction matters because a strong operational forecast may partly reflect persistent crop-region productivity rather than purely within-season weather signal.
 
 We make three contributions. First, we formulate Australian winter-crop forecasting as a lead-time-aware shortfall-monitoring problem, where predictions are updated from May-Jun to May-Oct rather than evaluated only after the season is nearly complete. Second, we separate a history-free weather-soil setting from a history-enhanced operational setting, allowing weather-derived early-warning evidence to be distinguished from persistent crop-region productivity memory. Third, we evaluate practical usefulness through temporal holdout testing, feature-regime ablation, stress validation, threshold-tuned risk screening, and uncertainty diagnostics, framing the outputs as state-level decision support rather than causal or farm-level prediction.
 
@@ -123,7 +123,7 @@ The weather feature groups are rainfall accumulation and dry spells, heat and co
 \resizebox{\textwidth}{!}{\input{tables/table_feature_groups.tex}}
 \end{table}
 
-We additionally construct weather anomaly features by subtracting train-period region-window baselines. This produces rainfall, temperature, dry-spell, heat-day, evapotranspiration, and radiation deviations that are comparable across regions and forecast windows. The anomaly baselines are computed using training years only, so they do not leak test-period information.
+We additionally construct weather-deviation features by subtracting train-period region-window baselines. This produces rainfall, temperature, dry-spell, heat-day, evapotranspiration, and radiation deviations that are comparable across regions and forecast windows. The weather-deviation baselines are computed using training years only, so they do not leak test-period information.
 
 \subsection{History-Free and Operational Feature Sets}
 
@@ -135,9 +135,9 @@ Classification models use validation-tuned thresholds for low-yield-risk decisio
 
 \section{Evaluation Protocol}
 
-The main split trains on 1989--2012, tunes on 2013--2016, and tests on 2017--2021. The test period is not used for scalers, feature thresholds, residual calibration, conformal residuals, anomaly baselines, or low-yield-risk thresholds. This temporal split reflects the intended forecasting direction: models learn from earlier seasons and are evaluated on later seasons.
+The main split trains on 1989--2012, tunes on 2013--2016, and tests on 2017--2021. The test period is not used for scalers, feature thresholds, residual calibration, conformal residuals, expected-yield baselines, weather-deviation baselines, or low-yield-risk thresholds. This temporal split reflects the intended forecasting direction: models learn from earlier seasons and are evaluated on later seasons.
 
-Regression metrics are MAE, RMSE, and R2. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width, and we interpret under-coverage as a limitation rather than tuning intervals on the test set. The primary model-selection comparisons are always made within the same forecast window and split.
+Regression metrics are MAE, RMSE, and R2. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width. The conformal intervals target nominal 80\% marginal coverage using validation-period calibration residuals only; test coverage is reported without retuning. Deviations from nominal coverage are interpreted as evidence of calibration difficulty under temporal shift and small calibration samples, not as a target corrected using test outcomes. The primary model-selection comparisons are always made within the same forecast window and split.
 
 Robustness checks include rolling-origin folds, leave-one-crop-out validation, and leave-one-region-out validation. Rolling-origin validation tests sensitivity to a single time split. Leave-one-crop-out and leave-one-region-out are intentionally difficult transfer tests. We do not treat them as the main deployment setting, because the intended use case is monitoring crop-region combinations with historical observations. Instead, they identify where the framework is not yet robust enough for unseen-crop or unseen-state generalization.
 
@@ -145,7 +145,7 @@ Robustness checks include rolling-origin folds, leave-one-crop-out validation, a
 
 \subsection{Lead-Time Skill}
 
-Table~\ref{tab:lead-time} compares the best history-free weather-soil and operational models at each lead time. For each window and feature regime, the displayed model is selected using validation years only, with RMSE as the selection metric. The operational model is already informative at May-Jun, with RMSE 0.721 t/ha and R2 0.676, and improves toward May-Oct. This early result is important because the May-Jun window contains only a partial season, yet still captures enough historical and early-weather structure for useful monitoring. The history-free model is weaker but still positive, reaching RMSE 0.889 t/ha and R2 0.507 at May-Oct. The history-free trajectory is not strictly monotonic: later windows add useful weather information but also correlated features and noise in a small state-level panel. We therefore interpret the curve as a monitoring trajectory rather than assuming that every additional month must improve skill. The gap between the two regimes motivates the central interpretation of the paper: weather and soil provide measurable early-warning signal, but historical yield memory is a major driver of operational accuracy.
+Table~\ref{tab:lead-time} compares the best history-free weather-soil and operational models at each lead time. For each window and feature regime, the displayed model is selected using validation years only, with RMSE as the selection metric. The operational model is already informative at May-Jun, with RMSE 0.721 t/ha and R2 0.676, and improves toward May-Oct. This early result is important because the May-Jun window contains only a partial season, yet still captures enough historical and early-weather structure for useful monitoring. The history-free model is weaker but still positive, reaching RMSE 0.889 t/ha and R2 0.507 at May-Oct. The history-free trajectory is not strictly monotonic: later windows add useful weather information but also correlated features and noise in a small state-level panel. We therefore interpret the curve as a monitoring trajectory rather than assuming that every additional month must improve skill. The gap between the two regimes motivates the central interpretation of the paper: weather and soil provide measurable but secondary monitoring signal, while historical yield memory is a major driver of operational accuracy. A fixed-model lead-time check in Appendix~\ref{tab:fixed-model} verifies that the lead-time pattern is not solely an artifact of switching model classes across windows.
 
 \begin{table}[htbp]
 \centering
@@ -157,7 +157,7 @@ Table~\ref{tab:lead-time} compares the best history-free weather-soil and operat
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.92\textwidth]{figures/fig01_framework_timeline.png}
-\caption{Stage-aware early-warning timeline. Each forecast window uses weather only up to its cutoff month.}
+\caption{Stage-aware early-warning workflow. Each forecast window uses weather only up to its cutoff month, combines it with static soil and crop-region context, and updates forecasts, risk scores, intervals, and analyst watch lists.}
 \label{fig:framework}
 \end{figure}
 
@@ -170,7 +170,7 @@ Table~\ref{tab:lead-time} compares the best history-free weather-soil and operat
 
 \subsection{Ablation: Weather Signal Versus Yield History}
 
-Table~\ref{tab:ablation} shows compact ablation results for the earliest and latest windows. The identity/time baseline is not trivial because crop and region encode persistent productivity differences. Weather-only and weather-plus-soil feature sets add stage-specific environmental information, while the full operational model combines this information with past-yield history. The history-free weather-soil model improves over identity/time-only baselines in the full May-Oct window, but the operational model is substantially stronger. Weather anomalies are not uniformly beneficial once raw stage summaries and soil are included, which suggests that train-derived deviations should be treated as candidate monitoring features rather than guaranteed improvements. The lag-yield-only feature set is also strong, indicating that persistent crop-region yield history carries important predictive information. This result is useful scientifically because it prevents overclaiming: the best forecast is not evidence that within-season weather alone explains the outcome.
+Table~\ref{tab:ablation} shows compact ablation results for the earliest and latest windows. The identity/time baseline is not trivial because crop and region encode persistent productivity differences. Weather-only and weather-plus-soil feature sets add stage-specific environmental information, while the full operational model combines this information with past-yield history. The history-free weather-soil models retain positive test skill, especially in the May-Oct window, but they do not consistently outperform identity/time or simple historical baselines. This limits the interpretation of the weather-soil setting: it provides evidence that within-season environmental features contain monitoring signal, not that weather and soil alone dominate persistent crop-region structure. Weather-deviation features are not uniformly beneficial once raw stage summaries and soil are included, which suggests that train-derived deviations should be treated as candidate monitoring features rather than guaranteed improvements. The lag-yield-only feature set is also strong, indicating that persistent crop-region yield history carries important predictive information.
 
 \begin{table}[htbp]
 \centering
@@ -186,7 +186,7 @@ Table~\ref{tab:ablation} shows compact ablation results for the earliest and lat
 \label{fig:ablation-delta}
 \end{figure}
 
-Table~\ref{tab:naive-baselines} compares the May-Oct models with simple historical baselines. Previous-year yield and rolling past yield are strong, confirming that persistence matters. The operational model still improves on these baselines, while the history-free model remains useful as evidence for within-season weather-soil monitoring rather than as the best deployment model.
+Table~\ref{tab:naive-baselines} compares the May-Oct models with simple historical baselines. Previous-year yield and rolling past yield are strong, confirming that persistence matters. The operational model still improves on these baselines, while the history-free model remains useful as evidence for within-season weather-soil monitoring rather than as the best deployment model. Simple chronological yield-history baselines are therefore difficult to beat in this state-level panel. The history-free weather-soil model is not presented as the most accurate deployment option; its role is to isolate the information available from within-season weather and regional soil context, whereas the operational model is preferred for known crop-region histories.
 
 \begin{table}[htbp]
 \centering
@@ -208,7 +208,7 @@ Risk classification is treated as a decision-support layer rather than the prima
 
 \begin{table}[htbp]
 \centering
-\caption{Held-out May-Oct ranked watch-list example. The table is an analyst-review format, not an automatic policy trigger. Observed indicates the held-out low-yield-risk label.}
+\caption{Held-out May-Oct ranked watch-list example. Risk scores are used for ranking analyst-review watch lists and should not be interpreted as fully calibrated event probabilities. The constant PI width reflects the compact conformal interval summary used for this example, not event-specific uncertainty calibration. Observed indicates the held-out low-yield-risk label.}
 \label{tab:watch-list}
 \resizebox{\textwidth}{!}{\input{tables/table_watch_list_top10.tex}}
 \end{table}
@@ -219,7 +219,7 @@ Table~\ref{tab:validation} summarizes robustness checks using the best model wit
 
 \begin{table}[htbp]
 \centering
-\caption{Compact stress validation summary. Rows report mean performance across the folds/windows in each protocol for the best model within a feature regime; leave-one-region-out is a deliberately hard unseen-region test.}
+\caption{Compact stress validation summary. Rows report mean performance across the folds and forecast windows belonging to each protocol for the best model within a feature regime. The held-out-test row is therefore an all-window stress summary, not the May-Oct-only result in Table~\ref{tab:lead-time}; leave-one-region-out is a deliberately hard unseen-region test.}
 \label{tab:validation}
 \resizebox{\textwidth}{!}{\input{tables/table_validation.tex}}
 \end{table}
@@ -246,7 +246,9 @@ Group permutation importance confirms the ablation results. Lag-yield features d
 
 \section{Discussion}
 
-The results suggest a two-tier interpretation. The history-free weather-soil model establishes that stage-aware weather and soil information contain useful early-warning signal. The operational model, however, is the more accurate forecasting tool because it also uses historical yield memory. This distinction is practically important: agencies or supply-chain users with stable regional histories may prefer the operational model, while scientific analyses of within-season climate signal should emphasize the history-free model.
+The results suggest a two-tier interpretation. The history-free weather-soil model establishes that stage-aware weather and soil information contain measurable but secondary early-warning signal. The operational model, however, is the more accurate forecasting tool because it also uses historical yield memory. This distinction is practically important: agencies or supply-chain users with stable regional histories may prefer the operational model, while scientific analyses of within-season climate signal should emphasize the history-free model.
+
+Taken together, the results answer the four research questions as follows. RQ1: useful operational skill is available from May-Jun and improves toward May-Oct, while history-free skill is positive but noisier. RQ2: lagged yield history and crop-region persistence explain much of the strongest accuracy, whereas weather-soil features provide a weaker but interpretable monitoring signal. RQ3: risk classification is useful as a ranked screening layer, not as an automatic trigger. RQ4: rolling-origin checks are encouraging, but leave-one-region-out transfer remains weak, limiting deployment to known crop-region histories.
 
 The May-Jun operational result indicates that useful signal exists before the full growing season is observed. May-Oct provides the strongest final pre-harvest performance. Thus, the framework is best seen as a monitoring trajectory rather than a single fixed-date predictor. A decision maker could inspect May-Jun results as an early watch list, update the same crop-region panel as the season progresses, and use May-Sep or May-Oct results for more confident supply-risk assessment.
 
@@ -254,13 +256,15 @@ The strongest practical use cases are state-level monitoring, drought preparedne
 
 The Round 3 residual check further clarifies the claim. When a crop-region-year baseline is fitted first, a residual-only weather-soil model does not beat the direct history-free weather-soil model. This negative result supports the conservative narrative: weather and soil signals are useful, but much state-level predictability is tied to persistent crop-region structure and historical yield memory.
 
+Soil attributes should be interpreted as regional conditioning variables. Their incremental accuracy gains are small and not uniform across feature regimes, but they help represent background vulnerability differences that would otherwise be absorbed entirely by crop-region identifiers.
+
 \section{Limitations}
 
 The analysis is state-level, not farm-level. It does not support field-scale prescription, insurance payout decisions, or causal claims about heat, drought, or soil mechanisms. The soil features are regional background covariates and should not be interpreted as independently manipulated causal factors. Leave-one-region-out validation is weak, so transfer to unseen states remains an open problem. Crop-specific phenological calendars are also left for future work; this study uses a common May-Oct winter-crop proxy for all crops. Finally, the yield panel is small by modern machine-learning standards, so future work should test whether remote sensing, crop calendars, and finer spatial labels can improve transfer without introducing leakage.
 
 \section{Conclusion}
 
-We presented a stage-aware early-warning framework for Australian winter crop yield shortfall. The best operational model reached RMSE 0.658 t/ha and R2 0.730 at May-Oct, while the best history-free weather-soil model reached RMSE 0.889 t/ha and R2 0.507. The gap between these regimes shows that weather and soil provide meaningful monitoring signal, but historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims.
+We presented a stage-aware early-warning framework for Australian winter crop yield shortfall. The best operational model reached RMSE 0.658 t/ha and R2 0.730 at May-Oct, while the best history-free weather-soil model reached RMSE 0.889 t/ha and R2 0.507. The gap between these regimes shows that weather and soil provide measurable but secondary monitoring signal, while historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims. The framework should be recalibrated before use in unseen regions or states.
 
 \bibliography{acml26}
 
@@ -286,7 +290,7 @@ We presented a stage-aware early-warning framework for Australian winter crop yi
 
 \begin{table}[htbp]
 \centering
-\caption{Compact uncertainty and calibration diagnostics. Coverage and width are for conformal intervals; Brier score is from the best validation-threshold classifier for each window.}
+\caption{Compact uncertainty and calibration diagnostics. Conformal intervals target nominal 80\% marginal coverage using validation-period residuals only; Brier score is from the best validation-threshold classifier for each window.}
 \label{tab:uncertainty}
 \resizebox{\textwidth}{!}{\input{tables/table_uncertainty_summary.tex}}
 \end{table}
