@@ -21,6 +21,7 @@ paper_acml/*.toc
 paper_acml/*.txt
 paper_acml/main_revision.*
 paper_acml/main_followup.*
+paper_acml/main_checklist.*
 paper_acml/main_layout_fixed.*
 paper_acml/layout_check_page-*.png
 paper_acml/acml26_submission_template.pdf

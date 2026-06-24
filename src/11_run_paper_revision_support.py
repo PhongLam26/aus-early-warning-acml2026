@@ -338,8 +338,12 @@ def make_split_importance_figure(tables_dir: Path, figures_dir: Path) -> pd.Data
         .agg(mean_rmse_delta=("rmse_delta_mean", "mean"), max_rmse_delta=("rmse_delta_mean", "max"), n_windows=("forecast_window", "nunique"))
         .sort_values(["feature_set", "mean_rmse_delta"], ascending=[True, False])
     )
+    group_labels = {"weather_anomaly": "weather_dev"}
+    summary["feature_group"] = summary["feature_group"].replace(group_labels)
     summary["feature_label"] = summary["feature_set"].map(FEATURE_LABELS)
-    summary.to_csv(tables_dir / "paper_revision_feature_importance_split.csv", index=False)
+    csv_summary = summary.copy()
+    csv_summary["feature_set"] = csv_summary["feature_label"]
+    csv_summary.to_csv(tables_dir / "paper_revision_feature_importance_split.csv", index=False)
 
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.8), sharex=False)
     colors = {"full_operational": "#22577a", "weather_anomaly_soil_no_lag": "#b56576"}

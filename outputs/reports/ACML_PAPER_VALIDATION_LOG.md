@@ -35,6 +35,7 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 - During the latest validation run, `paper_acml/main.pdf`, the handoff PDF, source zip, and OpenReview package were all refreshed successfully from the follow-up revision build.
 - Follow-up revision from `Loi_can_sua_tiep_bai_Uc_Early_Warning.docx` was applied: the manuscript no longer claims that the history-free weather-soil model outperforms identity/time or historical baselines.
 - Figure 1 was upgraded from a simple timeline to a workflow showing inputs, stage windows, model regimes, and monitoring outputs.
+- Final checklist from `Codex_fix_checklist_bai_Uc_Early_Warning.docx` was applied: remaining visible weather-anomaly wording was converted to weather-deviation wording, the Appendix A cross-reference was fixed, Figure 5 now uses `weather_dev`, and BibTeX accents were normalized.
 
 ## Anonymous Submission Checks
 
@@ -48,6 +49,7 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 - The manuscript separates the history-free weather-soil model from the operational lag-yield model.
 - History-free weather-soil is now framed as measurable but secondary monitoring information, not the best forecasting/deployment model.
 - Table labels use `Weather+Dev`/`Weather+Dev+Soil` for train-derived weather deviations, reducing anomaly-attribution language.
+- `Dev` is explicitly defined as train-derived weather-deviation features.
 - Table 7 uses `Risk score` and states that risk scores rank analyst-review watch lists rather than fully calibrated probabilities.
 - Uncertainty diagnostics state nominal 80% conformal coverage, validation-period residual calibration, and no test retuning.
 - Stress validation labels the held-out test-year row as an all-window mean, avoiding comparison with the May-Oct-only result.
@@ -72,3 +74,4 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 - `AUS_project/outputs/paper_revision_followup_2026_06_24/01_LOI_CAN_SUA_TIEP_REVISION_PLAN.md`
 - `AUS_project/outputs/paper_revision_followup_2026_06_24/02_IMPLEMENTATION_LOG.md`
 - `AUS_project/outputs/paper_revision_followup_2026_06_24/03_VALIDATION_AND_GIT_UPDATE.md`
+- `AUS_project/outputs/codex_fix_checklist_2026_06_24/CODEX_FIX_CHECKLIST_IMPLEMENTATION_LOG.md`
