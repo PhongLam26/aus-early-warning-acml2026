@@ -1,0 +1,88 @@
+{
+  "project": {
+    "title": "Stage-Aware Early Warning of Australian Winter Crop Yield Shortfall Using Daily Weather and Soil Data",
+    "analysis_unit": ["region", "crop", "year_start"],
+    "random_state": 42
+  },
+  "paths": {
+    "yield_panel": "data/raw/yield/yield_panel.csv",
+    "daily_weather": "data/raw/daily_weather/australia_silo_daily_all_states_1989_present.csv",
+    "soil_wide": "data/raw/soil/soil_features_by_region.csv",
+    "soil_long": "data/raw/soil/soil_features_by_region_long.csv",
+    "processed_dir": "data/processed",
+    "tables_dir": "outputs/tables",
+    "figures_dir": "outputs/figures",
+    "reports_dir": "outputs/reports"
+  },
+  "crops": ["Barley", "Canola", "Lupins", "Oats", "Wheat"],
+  "regions": [
+    "New South Wales",
+    "Queensland",
+    "South Australia",
+    "Tasmania",
+    "Victoria",
+    "Western Australia"
+  ],
+  "forecast_windows": [
+    {"name": "May-Jun", "start_month": 5, "end_month": 6, "order": 1},
+    {"name": "May-Jul", "start_month": 5, "end_month": 7, "order": 2},
+    {"name": "May-Aug", "start_month": 5, "end_month": 8, "order": 3},
+    {"name": "May-Sep", "start_month": 5, "end_month": 9, "order": 4},
+    {"name": "May-Oct", "start_month": 5, "end_month": 10, "order": 5}
+  ],
+  "splits": {
+    "train_start": 1989,
+    "train_end": 2012,
+    "validation_start": 2013,
+    "validation_end": 2016,
+    "test_start": 2017,
+    "test_end": 2021
+  },
+  "thresholds": {
+    "low_yield_percentile": 80,
+    "rain_day_mm": 1.0,
+    "heavy_rain_10_mm": 10.0,
+    "heavy_rain_25_mm": 25.0,
+    "heat_25_c": 25.0,
+    "heat_30_c": 30.0,
+    "heat_35_c": 35.0,
+    "frost_c": 0.0,
+    "cold_c": 5.0,
+    "high_evap_mm": 5.0,
+    "conformal_alpha": 0.2
+  },
+  "rolling_origin_folds": [
+    {"fold": "fold_1", "train_end": 2007, "test_start": 2008, "test_end": 2011},
+    {"fold": "fold_2", "train_end": 2011, "test_start": 2012, "test_end": 2015},
+    {"fold": "fold_3", "train_end": 2015, "test_start": 2016, "test_end": 2019}
+  ],
+  "soil": {
+    "attributes": ["AWC", "BULK-DENSITY", "CLAY", "SAND", "SILT", "SOC", "TOTAL_N", "TOTAL_P", "PHC", "ECEC"],
+    "depth_groups": [
+      {"name": "topsoil_0_30", "upper_cm": 0, "lower_cm": 30},
+      {"name": "subsoil_30_100", "upper_cm": 30, "lower_cm": 100}
+    ],
+    "depth_attributes": ["DEPTH_OF_SOIL", "DEPTH_OF_REGOLITH"]
+  },
+  "round2_feature_sets": [
+    "identity_time_only",
+    "weather_stage_only",
+    "weather_plus_anomaly",
+    "weather_plus_soil",
+    "weather_anomaly_soil_no_lag",
+    "lag_yield_only",
+    "full_operational"
+  ],
+  "round2_validation_protocols": [
+    "time_split",
+    "rolling_origin",
+    "leave_one_region_out",
+    "leave_one_crop_out"
+  ],
+  "round2_primary_models": {
+    "regression": ["Ridge", "ElasticNet", "LightGBM", "CatBoost"],
+    "classification": ["LogisticRegression", "LightGBMClassifier", "CatBoostClassifier"],
+    "stress_regression": ["Ridge", "LightGBM"],
+    "stress_classification": ["LogisticRegression", "LightGBMClassifier"]
+  }
+}

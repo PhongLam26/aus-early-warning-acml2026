@@ -1,0 +1,21 @@
+forecast_window,feature_set,model,n_test,MAE,R2,RMSE,feature_label
+May-Jun,full_operational,LightGBM,149,0.6417459338390283,0.5373770515297016,0.8609460161962245,Operational with yield history
+May-Jul,full_operational,LightGBM,149,0.5966305213463752,0.5397695800924294,0.8587168703596734,Operational with yield history
+May-Aug,full_operational,LightGBM,149,0.5790286710538318,0.5146632555002522,0.8818280741235607,Operational with yield history
+May-Sep,full_operational,LightGBM,149,0.5830500011279985,0.5111164421997916,0.8850443833522849,Operational with yield history
+May-Oct,full_operational,LightGBM,149,0.5379293868048702,0.5751874562340724,0.8250133965876482,Operational with yield history
+May-Jun,full_operational,Ridge,149,0.5728494071955575,0.6517160328869225,0.7470145760044083,Operational with yield history
+May-Jul,full_operational,Ridge,149,0.5298376071396548,0.6765282877508401,0.7199137830502308,Operational with yield history
+May-Aug,full_operational,Ridge,149,0.5353467768961767,0.6488399373870672,0.7500926217754506,Operational with yield history
+May-Sep,full_operational,Ridge,149,0.4671480627950701,0.6898806738036501,0.7048987663980497,Operational with yield history
+May-Oct,full_operational,Ridge,149,0.4236564868153168,0.7301075135523823,0.657593833293215,Operational with yield history
+May-Jun,weather_anomaly_soil_no_lag,LightGBM,149,0.6584855637474262,0.4701969304215309,0.9213392432804132,History-free weather-soil
+May-Jul,weather_anomaly_soil_no_lag,LightGBM,149,0.6932270239902264,0.3021342154763096,1.0574218681773002,History-free weather-soil
+May-Aug,weather_anomaly_soil_no_lag,LightGBM,149,0.6211426869933483,0.4066346069724139,0.9750422648289532,History-free weather-soil
+May-Sep,weather_anomaly_soil_no_lag,LightGBM,149,0.621128939100965,0.4411609657742742,0.9462495836271952,History-free weather-soil
+May-Oct,weather_anomaly_soil_no_lag,LightGBM,149,0.5849579012286364,0.4794644682524607,0.9132454656655568,History-free weather-soil
+May-Jun,weather_anomaly_soil_no_lag,Ridge,149,0.6913431848359817,0.360174938370574,1.0124951656655747,History-free weather-soil
+May-Jul,weather_anomaly_soil_no_lag,Ridge,149,0.6741552230167471,0.3741170560576976,1.0014030112978665,History-free weather-soil
+May-Aug,weather_anomaly_soil_no_lag,Ridge,149,0.6701124644848157,0.35304963038321,1.0181173005718414,History-free weather-soil
+May-Sep,weather_anomaly_soil_no_lag,Ridge,149,0.6200539478288146,0.4182710630924026,0.9654341755196786,History-free weather-soil
+May-Oct,weather_anomaly_soil_no_lag,Ridge,149,0.5362645525274213,0.5071056332109963,0.888667427208413,History-free weather-soil

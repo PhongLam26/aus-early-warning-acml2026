@@ -1,0 +1,549 @@
+paragraphs 269
+P001: Tổng hợp tài liệu tham khảo cho bài Úc
+P002: Stage-aware Early Warning of Australian Winter Crop Yield Shortfall Using Daily Weather and Soil Data
+P003: Khoảng 30 references, ưu tiên refs từ 2022 trở lại đây; có BibTeX kèm theo
+P004: 1. Mục tiêu của file này
+P005: File này gom các reference có thể cite cho bài Úc theo hướng mới: early-warning, probabilistic yield-risk forecasting, crop-stage weather features, soil-conditioned vulnerability và decision-support.
+P006: Mục tiêu là giúp bài Úc khác rõ với paper Mỹ trước đó. Paper Mỹ tập trung vào detrended anomaly explanation và multi-method XAI; bài Úc nên nhấn vào lead-time forecasting, probabilistic risk, calibration, prediction intervals và crop-state vulnerability.
+P007: Các ref được chia thành nhóm để dễ dùng trong Introduction, Related Work, Data, Method, Feature Engineering, Evaluation, Discussion và Limitations. Những ref nền tảng cũ vẫn được giữ nếu là citation bắt buộc cho data/method; phần còn lại ưu tiên 2022 trở lại đây.
+P008: 2. Cách dùng refs để bài Úc không giống paper Mỹ
+P009: Không đặt trọng tâm vào multi-method XAI. Chỉ dùng interpretability ở mức glassbox/transparent model như EBM/GAM response curves, hoặc dùng SHAP rất hạn chế nếu cần. Trọng tâm phải là early-warning và probabilistic decision-support.
+P010: Đổi câu hỏi nghiên cứu sang lead time. So sánh May-Jun, May-Jul, May-Aug, May-Sep, May-Oct để trả lời: dự báo sớm được từ lúc nào?
+P011: Đổi metric đánh giá. Ngoài RMSE/MAE, cần có Brier score/AUC/F1 cho low-yield risk, calibration curve, coverage của prediction interval, và skill theo lead time.
+P012: Đổi hình trực quan. Nên dùng forecast-skill-by-lead-time, calibration curve, prediction interval, crop-state vulnerability matrix, map 6 bang và dashboard mockup; tránh lặp grouped SHAP bar/rank heatmap của paper Mỹ.
+P013: Đổi claim ứng dụng. Nên viết là decision-support framework cho government/business, không claim model tự hoạch định chính sách hay chứng minh causality.
+P014: 3. Nhóm refs nên ưu tiên cite
+P015: Nguồn dữ liệu Úc: ABARES (2026); Jeffrey et al. (2001) - SILO; Grundy et al. (2015) - SLGA.
+P016: Bối cảnh Australia winter crops: Hochman et al. (2017); Feng et al. (2019).
+P017: Early-warning và yield forecasting: Anderson et al. (2024); Meroni et al. (2021); Paudel et al. (2021); De Clercq and Mahdi (2024).
+P018: Stage-aware/extreme-weather features: Schierhorn et al. (2021); Heino et al. (2023); Sjulgard et al. (2023); Heilemann et al. (2024); Kabtih and Qian (2025).
+P019: Interpretable/probabilistic modelling: Rudin (2022); Nori et al. (2019) - EBM/InterpretML; CatBoost/LightGBM papers; Romano et al. (2019); Angelopoulos and Bates (2023).
+P020: 4. Bảng tóm tắt 30 references
+P021: 5. Annotated reference notes
+P022: Mỗi ref dưới đây gồm: nhóm, cách dùng, lý do hữu ích, điểm cần cẩn trọng và BibTeX key.
+P023: [01] Australian Bureau of Agricultural and Resource Economics and Sciences (ABARES) (2026). Australian Crop Report
+P024: Nhóm/loại: Nguồn dữ liệu Úc / yield panel - Government data/report
+P025: Dùng trong bài: Dùng để mô tả nguồn crop/yield, phạm vi cây trồng mùa đông/mùa hè và logic state-level yield/production/area.
+P026: Lý do nên cite: Phù hợp trực tiếp với dataset của bài Úc vì yield_panel của bạn được trích từ workbook Australian Crop Report theo bang/crop/season.
+P027: Cẩn trọng: Không phải paper phương pháp. Cite trong phần Data, không dùng làm nền tảng ML.
+P028: BibTeX key: abares2026australianCropReport
+P029: [02] Jeffrey, Carter, Moodie, Beswick (2001). Using spatial interpolation to construct a comprehensive archive of Australian climate data
+P030: Nhóm/loại: Nguồn dữ liệu Úc / SILO weather - Peer-reviewed / data infrastructure
+P031: Dùng trong bài: Dùng để cite nền tảng SILO daily climate/weather data, đặc biệt khi mô tả rainfall, temperature, radiation, vapor pressure, evaporation theo ngày.
+P032: Lý do nên cite: Bài của bạn lấy daily weather Úc từ SILO; đây là citation nền tảng/primary reference cho kho dữ liệu khí hậu Úc.
+P033: Cẩn trọng: Cũ nhưng bắt buộc vì là nguồn dữ liệu nền tảng.
+P034: BibTeX key: jeffrey2001silo
+P035: [03] Grundy et al. (2015). Soil and Landscape Grid of Australia
+P036: Nhóm/loại: Nguồn dữ liệu Úc / soil - Peer-reviewed / data infrastructure
+P037: Dùng trong bài: Dùng để cite soil features như clay, sand, silt, pH, organic carbon, bulk density, plant available water, nitrogen, phosphorus.
+P038: Lý do nên cite: Dataset của bạn có soil_features_by_region; SLGA là nguồn nền tảng phù hợp cho phần soil data.
+P039: Cẩn trọng: Soil trong dataset chỉ 6 region-level rows, nên khi cite cần nói soil là static regional background, không phải farm-level soil.
+P040: BibTeX key: grundy2015slga
+P041: [04] Hochman, Gobbett, Horan (2017). Climate trends account for stalled wheat yields in Australia since 1990
+P042: Nhóm/loại: Bối cảnh Úc / wheat và climate trend - Peer-reviewed
+P043: Dùng trong bài: Dùng để chứng minh bối cảnh Úc: wheat yield chịu ảnh hưởng mạnh bởi biến đổi khí hậu, rainfall giảm và nhiệt độ tăng trong giai đoạn gần với dataset của bạn.
+P044: Lý do nên cite: Rất sát Australia winter-crop context, nhất là wheat và dryland cropping.
+P045: Cẩn trọng: Tập trung wheat, không nên suy rộng nguyên xi sang mọi crop trong bài.
+P046: BibTeX key: hochman2017climateTrendsAustralia
+P047: [05] Feng et al. (2019). From climatic risks to impacts: Drought and heat reduce wheat yield in Australia
+P048: Nhóm/loại: Bối cảnh Úc / drought-heat impact - Peer-reviewed
+P049: Dùng trong bài: Dùng để justify heat days, drought/dry spell, rainfall deficit, evaporation và compound hot-dry indicators.
+P050: Lý do nên cite: Sát với bài Úc vì nói trực tiếp drought/heat và wheat yield tại Australia.
+P051: Cẩn trọng: Tập trung wheat; bài của bạn có nhiều crop nên nên viết là một reference nền cho Australian winter-crop risk.
+P052: BibTeX key: feng2019droughtHeatAustralia
+P053: [06] van Klompenburg, Kassahun, Catal (2020). Crop yield prediction using machine learning: A systematic literature review
+P054: Nhóm/loại: ML crop yield review / nền tảng - Peer-reviewed review
+P055: Dùng trong bài: Dùng ở Related Work để nói ML crop yield prediction là hướng phổ biến và các input thường gồm weather, soil, remote sensing, management.
+P056: Lý do nên cite: Review nền trước 2022 giúp đặt bài Úc vào literature ML yield prediction.
+P057: Cẩn trọng: Không phải recent, chỉ dùng như reference nền tảng tổng quan.
+P058: BibTeX key: vanKlompenburg2020systematicReview
+P059: [07] Paudel et al. (2021). Machine learning for large-scale crop yield forecasting
+P060: Nhóm/loại: ML crop yield forecasting - Peer-reviewed
+P061: Dùng trong bài: Dùng để đặt baseline cho regional/large-scale crop yield forecasting bằng ML.
+P062: Lý do nên cite: Có liên quan đến forecast ở quy mô vùng/lớn và so sánh với mô hình thống kê/crop models.
+P063: Cẩn trọng: Chưa phải hướng early-warning/probabilistic chính của bài Úc, nhưng là nền tốt.
+P064: BibTeX key: paudel2021largeScaleYield
+P065: [08] Meroni, Waldner, Seguini, Kerdiles, Rembold (2021). Yield forecasting with machine learning and small data: What gains for grains?
+P066: Nhóm/loại: Small data / grains forecasting - Peer-reviewed
+P067: Dùng trong bài: Dùng để justify việc không dùng deep learning nặng khi yield panel chỉ khoảng 966 samples.
+P068: Lý do nên cite: Bài Úc là tabular small-to-moderate data; reference này giúp bảo vệ lựa chọn model như GAM/EBM/CatBoost thay vì LSTM/Transformer.
+P069: Cẩn trọng: Không phải Australia-specific.
+P070: BibTeX key: meroni2021smallData
+P071: [09] Schierhorn et al. (2021). Machine learning reveals complex effects of climatic means and weather extremes on wheat yields during different plant developmental stages
+P072: Nhóm/loại: Stage-aware weather features - Peer-reviewed
+P073: Dùng trong bài: Dùng để justify crop-stage weather aggregation thay vì chỉ dùng full-season averages.
+P074: Lý do nên cite: Rất sát với hướng mới: stage-aware features và weather extremes theo giai đoạn phát triển cây.
+P075: Cẩn trọng: Tập trung wheat và bối cảnh khác Úc; dùng như methodological motivation.
+P076: BibTeX key: schierhorn2021developmentalStages
+P077: [10] Anderson et al. (2024). Preseason maize and wheat yield forecasts for early warning of crop failure
+P078: Nhóm/loại: Early warning / lead time forecasting - Peer-reviewed
+P079: Dùng trong bài: Dùng làm reference trung tâm cho early warning, lead time, crop failure risk và anticipatory decision-making.
+P080: Lý do nên cite: Rất sát với hướng Úc mới: không chỉ dự đoán sau mùa vụ mà đánh giá khả năng cảnh báo sớm.
+P081: Cẩn trọng: Global/preseason climate forecasts, không giống hoàn toàn dataset daily SILO của bạn; dùng để justify framing early-warning.
+P082: BibTeX key: anderson2024preseasonWarning
+P083: [11] Paudel, Marcos, de Wit, Boogaard, Athanasiadis (2022). A weakly supervised framework for high-resolution crop yield forecasts
+P084: Nhóm/loại: Spatial scale / weak supervision - Preprint
+P085: Dùng trong bài: Dùng để thảo luận vấn đề mismatch spatial scale giữa predictor và yield labels; bài Úc cũng có weather/soil/yield ở mức region/state.
+P086: Lý do nên cite: Nói rõ high-resolution predictors và low-resolution labels là vấn đề phổ biến trong crop forecasting.
+P087: Cẩn trọng: Preprint; nếu hội nghị yêu cầu chặt, dùng như bổ trợ hoặc thay bằng peer-reviewed refs.
+P088: BibTeX key: paudel2022weaklySupervised
+P089: [12] Paudel et al. (2023). Interpretability of deep learning models for crop yield forecasting
+P090: Nhóm/loại: Interpretability in crop forecasting - Peer-reviewed
+P091: Dùng trong bài: Dùng để nói crop-yield models cần interpretability, nhưng bài Úc sẽ ưu tiên glassbox/probabilistic early warning thay vì multi-method post-hoc XAI.
+P092: Lý do nên cite: Recent, peer-reviewed, sát ML crop yield + interpretability.
+P093: Cẩn trọng: Deep learning focus; đừng để bài Úc bị kéo sang hướng DL nếu data nhỏ.
+P094: BibTeX key: paudel2023interpretability
+P095: [13] De Clercq, Mahdi (2024). Feasibility of machine learning-based rice yield prediction in India at the district level using climate reanalysis and remote sensing data
+P096: Nhóm/loại: ML yield prediction / dashboard decision support - Peer-reviewed
+P097: Dùng trong bài: Dùng để so sánh một framework ML yield prediction quy mô district với climate/reanalysis/remote sensing và hướng dashboard/decision-support.
+P098: Lý do nên cite: Recent và thực tế, giúp viết phần ứng dụng policy/business nhưng không trùng phương pháp với paper Mỹ.
+P099: Cẩn trọng: Rice/India, không phải winter crops Australia.
+P100: BibTeX key: declercq2024indiaRice
+P101: [14] Bansal, Lillis, Kechadi (2023). Winter Wheat Crop Yield Prediction on Multiple Heterogeneous Datasets using Machine Learning
+P102: Nhóm/loại: Heterogeneous data / winter wheat - Preprint
+P103: Dùng trong bài: Dùng nếu muốn nhấn mạnh việc kết hợp weather, soil, remote sensing hoặc nhiều nguồn dữ liệu khác nhau.
+P104: Lý do nên cite: Tên và hướng rất gần winter wheat/crop yield + heterogeneous datasets.
+P105: Cẩn trọng: Preprint, không dùng như reference chính nếu đã có nhiều peer-reviewed refs.
+P106: BibTeX key: bansal2023winterWheatHeterogeneous
+P107: [15] Pathak et al. (2023). Predicting Crop Yield With Machine Learning: An Extensive Analysis Of Input Modalities And Models On a Field and sub-field Level
+P108: Nhóm/loại: Input modalities / weather-soil integration - Preprint
+P109: Dùng trong bài: Dùng để support luận điểm: hiệu quả của model phụ thuộc vào crop, region, input modality và model choice.
+P110: Lý do nên cite: Có weather, soil, DEM, remote sensing, multi-modal; phù hợp phần discussion về giới hạn data Úc hiện chỉ có weather + soil + yield.
+P111: Cẩn trọng: Preprint và field/sub-field, trong khi bài Úc là state-level.
+P112: BibTeX key: pathak2023inputModalities
+P113: [16] Lin et al. (2024). An Open and Large-Scale Dataset for Multi-Modal Climate Change-aware Crop Yield Predictions
+P114: Nhóm/loại: Large-scale crop dataset / multi-modal benchmarking - Conference paper
+P115: Dùng trong bài: Dùng trong Related Work để chứng minh xu hướng mới: multi-modal, climate-aware crop yield prediction datasets/benchmarks.
+P116: Lý do nên cite: KDD 2024, rất recent và có liên quan climate-aware crop yield prediction.
+P117: Cẩn trọng: Không phải Australia-specific và quy mô dataset khác bài của bạn.
+P118: BibTeX key: lin2024cropnet
+P119: [17] Najjar, Miranda, Nuske, Roscher, Dengel (2024). Explainability of Sub-Field Level Crop Yield Prediction using Remote Sensing
+P120: Nhóm/loại: Explainability / growth stage relevance - Preprint
+P121: Dùng trong bài: Dùng để support ý critical growth stages có giá trị agronomic khi giải thích model.
+P122: Lý do nên cite: Dù bài Úc tránh multi-method XAI, vẫn có thể dùng EBM/GAM response curves theo stage; ref này giúp nói về stage-wise interpretability.
+P123: Cẩn trọng: Preprint, remote sensing + field/sub-field, khác state-level weather/soil data của bạn.
+P124: BibTeX key: najjar2024subfieldExplainability
+P125: [18] Choi et al. (2025). Recent Trends in Machine Learning, Deep Learning, Ensemble Learning, and Explainable Artificial Intelligence Techniques for Evaluating Crop Yields Under Abnormal Climate Conditions
+P126: Nhóm/loại: Recent review / abnormal climate - Peer-reviewed review
+P127: Dùng trong bài: Dùng làm recent review cho crop yield prediction under abnormal climate conditions, ensemble learning và XAI.
+P128: Lý do nên cite: Từ 2025, đúng yêu cầu recent refs từ 2022 trở lại đây.
+P129: Cẩn trọng: Review rộng, không thay thế refs phương pháp cụ thể.
+P130: BibTeX key: choi2025recentTrends
+P131: [19] Mohan (2025). Next-gen agriculture: integrating AI and XAI for precision crop yield predictions
+P132: Nhóm/loại: AI/XAI agriculture - Peer-reviewed
+P133: Dùng trong bài: Dùng nếu cần nói transparency/XAI giúp tăng độ tin cậy của mô hình crop-yield trong bối cảnh climate variability.
+P134: Lý do nên cite: Recent, agriculture + XAI + crop yield prediction.
+P135: Cẩn trọng: Không biến bài Úc thành XAI-heavy; chỉ dùng để support transparency/interpretability.
+P136: BibTeX key: mohan2025nextGenXAI
+P137: [20] Heino et al. (2023). Increased probability of hot and dry weather extremes during the growing season threatens global crop yields
+P138: Nhóm/loại: Extreme weather / compound heat-drought - Peer-reviewed
+P139: Dùng trong bài: Dùng để justify compound hot-dry feature, heat days + dry days, and climate-risk discussion.
+P140: Lý do nên cite: Recent Nature/Sci Reports paper, có wheat và nhiều crops; rất phù hợp với weather-risk framing.
+P141: Cẩn trọng: Global scale, không thay thế Australia-specific refs.
+P142: BibTeX key: heino2023hotDryExtremes
+P143: [21] Sjulgard, Keller, Garland, Colombi (2023). Relationships between weather and yield anomalies vary with crop type and latitude in Sweden
+P144: Nhóm/loại: Weather-yield anomalies / crop-region variation - Peer-reviewed
+P145: Dùng trong bài: Dùng để support rằng weather-yield relationships khác nhau theo crop và vùng, nên bài Úc cần per-crop/per-region analysis.
+P146: Lý do nên cite: Recent và gần với ý crop-state vulnerability matrix.
+P147: Cẩn trọng: Sweden, không phải Australia.
+P148: BibTeX key: sjulgard2023swedenAnomalies
+P149: [22] Heilemann et al. (2024). Projecting impacts of extreme weather events on crop yields using LASSO regression
+P150: Nhóm/loại: Extreme weather modelling - Peer-reviewed
+P151: Dùng trong bài: Dùng để support sparse/regularized models and extreme-weather feature modelling.
+P152: Lý do nên cite: Recent, peer-reviewed, nói trực tiếp extreme-weather events và crop yield.
+P153: Cẩn trọng: Phương pháp LASSO không phải model chính của bạn, nhưng có thể dùng làm baseline rationale.
+P154: BibTeX key: heilemann2024lassoExtremes
+P155: [23] Kabtih, Qian (2025). Risk of successive hot-pluvial extremes on crop yield loss over global breadbasket regions
+P156: Nhóm/loại: Compound extremes / breadbasket risk - Peer-reviewed
+P157: Dùng trong bài: Dùng để mở rộng discussion rằng không chỉ hot-dry mà hot-pluvial/successive compound extremes cũng ảnh hưởng yield.
+P158: Lý do nên cite: Rất recent 2025 và liên quan breadbasket crop-yield loss.
+P159: Cẩn trọng: Không nên làm bài quá loãng; chỉ cite nếu bạn có heavy-rain/excess-rain hoặc compound feature.
+P160: BibTeX key: kabtih2025hotPluvial
+P161: [24] Meng, Qian (2024). Performances of different yield-detrending methods in assessing the impacts of agricultural drought and flooding
+P162: Nhóm/loại: Detrending / yield shortfall target - Peer-reviewed
+P163: Dùng trong bài: Dùng nếu target của bài là yield shortfall/anomaly so với expected yield, cần detrend hoặc chuẩn hóa theo crop-region.
+P164: Lý do nên cite: Recent và trực tiếp nói detrending methods để đánh giá drought/flooding impacts.
+P165: Cẩn trọng: Bài Úc không nên lặp lại anomaly-XAI của paper Mỹ; nếu dùng detrending thì chỉ để tạo expected yield/shortfall target cho early warning.
+P166: BibTeX key: meng2024detrending
+P167: [25] Rudin (2022). Why black box machine learning should be avoided for high-stakes decisions, in brief
+P168: Nhóm/loại: Interpretability / high-stakes decisions - Peer-reviewed primer
+P169: Dùng trong bài: Dùng để justify vì sao bài Úc ưu tiên interpretable/glassbox/probabilistic decision-support thay vì black-box-only XAI.
+P170: Lý do nên cite: Rất phù hợp cho claim policy/business decision support.
+P171: Cẩn trọng: Không phải agriculture-specific, dùng trong Method/Discussion về transparency.
+P172: BibTeX key: rudin2022blackboxBrief
+P173: [26] Nori, Jenkins, Koch, Caruana (2019). InterpretML: A Unified Framework for Machine Learning Interpretability
+P174: Nhóm/loại: Glassbox / Explainable Boosting Machine - Preprint / software paper
+P175: Dùng trong bài: Dùng để cite EBM/InterpretML nếu model chính là Explainable Boosting Machine.
+P176: Lý do nên cite: EBM là lựa chọn tốt để bài Úc khác paper Mỹ: interpretable model nội tại thay vì post-hoc multi-method XAI.
+P177: Cẩn trọng: Preprint/software paper; có thể bổ sung docs nếu reviewer hỏi implementation.
+P178: BibTeX key: nori2019interpretml
+P179: [27] Prokhorenkova et al. (2018). CatBoost: unbiased boosting with categorical features
+P180: Nhóm/loại: Model foundation / CatBoost - Conference paper
+P181: Dùng trong bài: Dùng để cite CatBoost nếu model benchmark/model chính có crop và region categorical features.
+P182: Lý do nên cite: CatBoost xử lý categorical variables tốt, phù hợp crop/region/year panel.
+P183: Cẩn trọng: Model foundation cũ nhưng bắt buộc nếu dùng CatBoost.
+P184: BibTeX key: prokhorenkova2018catboost
+P185: [28] Ke et al. (2017). LightGBM: A Highly Efficient Gradient Boosting Decision Tree
+P186: Nhóm/loại: Model foundation / LightGBM - Conference paper
+P187: Dùng trong bài: Dùng để cite LightGBM nếu dùng boosting baseline hoặc quantile regression variant.
+P188: Lý do nên cite: LightGBM là model mạnh cho tabular data và có thể mở rộng sang quantile/objective cho uncertainty/risk intervals.
+P189: Cẩn trọng: Model foundation cũ; cite ngắn trong Method.
+P190: BibTeX key: ke2017lightgbm
+P191: [29] Romano, Patterson, Candes (2019). Conformalized Quantile Regression
+P192: Nhóm/loại: Uncertainty / conformalized quantile regression - Conference paper
+P193: Dùng trong bài: Dùng để cite phương pháp conformalized quantile regression cho prediction intervals có coverage guarantee.
+P194: Lý do nên cite: Rất phù hợp nếu bài Úc chuyển sang probabilistic early-warning thay vì point prediction.
+P195: Cẩn trọng: Không agriculture-specific; cần giải thích vì sao uncertainty quan trọng cho decision support.
+P196: BibTeX key: romano2019cqr
+P197: [30] Angelopoulos, Bates (2023). Conformal Prediction: A Gentle Introduction
+P198: Nhóm/loại: Uncertainty / conformal prediction - Peer-reviewed tutorial
+P199: Dùng trong bài: Dùng để giải thích conformal prediction, uncertainty interval và coverage trong Method.
+P200: Lý do nên cite: Rất phù hợp cho bài early-warning nếu output là risk/probability/prediction interval.
+P201: Cẩn trọng: Tutorial/general ML, không phải crop-yield paper.
+P202: BibTeX key: angelopoulos2023conformal
+P203: 6. Appendix - BibTeX entries
+P204: Có thể copy trực tiếp vào file .bib. Trước khi nộp chính thức, nên kiểm tra lại style hội nghị và format tên tạp chí theo BibTeX/LaTeX của template.
+P205: % [01] abares2026australianCropReport
+P206: @misc{abares2026australianCropReport,
+  author       = {{Australian Bureau of Agricultural and Resource Economics and Sciences}},
+  title        = {Australian Crop Report},
+  year         = {2026},
+  howpublished = {Australian Government Department of Agriculture, Fisheries and Forestry},
+  url          = {https://www.agriculture.gov.au/abares/research-topics/agricultural-outlook/australian-crop-report},
+  note         = {Accessed 2026-06-24}
+}
+P207: % [02] jeffrey2001silo
+P208: @article{jeffrey2001silo,
+  author  = {Jeffrey, S. J. and Carter, J. O. and Moodie, K. B. and Beswick, A. R.},
+  title   = {Using spatial interpolation to construct a comprehensive archive of Australian climate data},
+  journal = {Environmental Modelling \& Software},
+  volume  = {16},
+  number  = {4},
+  pages   = {309--330},
+  year    = {2001},
+  doi     = {10.1016/S1364-8152(01)00008-1}
+}
+P209: % [03] grundy2015slga
+P210: @article{grundy2015slga,
+  author  = {Grundy, Mike J. and Rossel, Raphael A. Viscarra and Searle, Ross D. and Wilson, Peter L. and Chen, Changming and Gregory, Lisa J.},
+  title   = {Soil and Landscape Grid of Australia},
+  journal = {Soil Research},
+  volume  = {53},
+  number  = {8},
+  pages   = {835--844},
+  year    = {2015},
+  doi     = {10.1071/SR15191}
+}
+P211: % [04] hochman2017climateTrendsAustralia
+P212: @article{hochman2017climateTrendsAustralia,
+  author  = {Hochman, Zvi and Gobbett, David L. and Horan, Heidi},
+  title   = {Climate trends account for stalled wheat yields in Australia since 1990},
+  journal = {Global Change Biology},
+  volume  = {23},
+  number  = {5},
+  pages   = {2071--2081},
+  year    = {2017},
+  doi     = {10.1111/gcb.13604}
+}
+P213: % [05] feng2019droughtHeatAustralia
+P214: @article{feng2019droughtHeatAustralia,
+  author  = {Feng, Puyu and Wang, Bin and Liu, Dongliang L. and Waters, Cathy and Xiao, Di and Shi, Li and Yu, Qiang},
+  title   = {From climatic risks to impacts: Drought and heat reduce wheat yield in Australia},
+  journal = {Agricultural Systems},
+  volume  = {173},
+  pages   = {303--316},
+  year    = {2019},
+  doi     = {10.1016/j.agsy.2019.03.015}
+}
+P215: % [06] vanKlompenburg2020systematicReview
+P216: @article{vanKlompenburg2020systematicReview,
+  author  = {van Klompenburg, Thomas and Kassahun, Ayalew and Catal, Cagatay},
+  title   = {Crop yield prediction using machine learning: A systematic literature review},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {177},
+  pages   = {105709},
+  year    = {2020},
+  doi     = {10.1016/j.compag.2020.105709}
+}
+P217: % [07] paudel2021largeScaleYield
+P218: @article{paudel2021largeScaleYield,
+  author  = {Paudel, Dilli R. and Boogaard, Hendrik and de Wit, Allard and Janssen, Sander and Osinga, Sjoukje and Pylianidis, Christos and Athanasiadis, Ioannis N.},
+  title   = {Machine learning for large-scale crop yield forecasting},
+  journal = {Agricultural Systems},
+  volume  = {187},
+  pages   = {103016},
+  year    = {2021},
+  doi     = {10.1016/j.agsy.2020.103016}
+}
+P219: % [08] meroni2021smallData
+P220: @article{meroni2021smallData,
+  author  = {Meroni, Michele and Waldner, Fran{\c{c}}ois and Seguini, Lucia and Kerdiles, Herv{'e} and Rembold, Felix},
+  title   = {Yield forecasting with machine learning and small data: What gains for grains?},
+  journal = {Agricultural and Forest Meteorology},
+  volume  = {308--309},
+  pages   = {108555},
+  year    = {2021},
+  doi     = {10.1016/j.agrformet.2021.108555}
+}
+P221: % [09] schierhorn2021developmentalStages
+P222: @article{schierhorn2021developmentalStages,
+  author  = {Schierhorn, Florian and Hofmann, Max and Gagalyuk, Taras and Ostapchuk, Igor and M{"u}ller, Daniel},
+  title   = {Machine learning reveals complex effects of climatic means and weather extremes on wheat yields during different plant developmental stages},
+  journal = {Climatic Change},
+  volume  = {169},
+  number  = {39},
+  year    = {2021},
+  doi     = {10.1007/s10584-021-03272-0}
+}
+P223: % [10] anderson2024preseasonWarning
+P224: @article{anderson2024preseasonWarning,
+  author  = {Anderson, Weston and Shukla, Shraddhanand and Verdin, Jim and Hoell, Andrew and Justice, Christina and Barker, Brian and Slinski, Kimberly and Lenssen, Nathan and Lou, Jiale and Cook, Benjamin I. and McNally, Amy},
+  title   = {Preseason maize and wheat yield forecasts for early warning of crop failure},
+  journal = {Nature Communications},
+  volume  = {15},
+  number  = {1},
+  pages   = {1--11},
+  year    = {2024},
+  doi     = {10.1038/s41467-024-51555-8}
+}
+P225: % [11] paudel2022weaklySupervised
+P226: @misc{paudel2022weaklySupervised,
+  author       = {Paudel, Dilli R. and Marcos, Diego and de Wit, Allard and Boogaard, Hendrik and Athanasiadis, Ioannis N.},
+  title        = {A weakly supervised framework for high-resolution crop yield forecasts},
+  year         = {2022},
+  eprint       = {2205.09016},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2205.09016}
+}
+P227: % [12] paudel2023interpretability
+P228: @article{paudel2023interpretability,
+  author  = {Paudel, Dilli and de Wit, Allard and Boogaard, Hendrik and Marcos, Diego and Osinga, Sjoukje and Athanasiadis, Ioannis N.},
+  title   = {Interpretability of deep learning models for crop yield forecasting},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {206},
+  pages   = {107663},
+  year    = {2023},
+  doi     = {10.1016/j.compag.2023.107663}
+}
+P229: % [13] declercq2024indiaRice
+P230: @article{declercq2024indiaRice,
+  author  = {De Clercq, Djavan and Mahdi, Adam},
+  title   = {Feasibility of machine learning-based rice yield prediction in India at the district level using climate reanalysis and remote sensing data},
+  journal = {Agricultural Systems},
+  volume  = {220},
+  pages   = {104099},
+  year    = {2024},
+  doi     = {10.1016/j.agsy.2024.104099}
+}
+P231: % [14] bansal2023winterWheatHeterogeneous
+P232: @misc{bansal2023winterWheatHeterogeneous,
+  author       = {Bansal, Srishti and Lillis, David and Kechadi, Tahar},
+  title        = {Winter Wheat Crop Yield Prediction on Multiple Heterogeneous Datasets using Machine Learning},
+  year         = {2023},
+  eprint       = {2306.11946},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2306.11946}
+}
+P233: % [15] pathak2023inputModalities
+P234: @misc{pathak2023inputModalities,
+  author       = {Pathak, Deepak and Miranda, Miro and Mena, Francisco and Sanchez, Cristhian and Helber, Patrick and Bischke, Benjamin and Habelitz, Peter and Najjar, Hiba and Siddamsetty, Jayanth and Arenas, Diego and Vollmer, Michaela and Charfuelan, Marcela and Nuske, Marlon and Dengel, Andreas},
+  title        = {Predicting Crop Yield With Machine Learning: An Extensive Analysis Of Input Modalities And Models On a Field and sub-field Level},
+  year         = {2023},
+  eprint       = {2308.08948},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2308.08948}
+}
+P235: % [16] lin2024cropnet
+P236: @inproceedings{lin2024cropnet,
+  author    = {Lin, Fudong and Guillot, Kaleb and Crawford, Summer and Zhang, Yihe and Yuan, Xu and Tzeng, Nian-Feng},
+  title     = {An Open and Large-Scale Dataset for Multi-Modal Climate Change-aware Crop Yield Predictions},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages     = {5375--5386},
+  year      = {2024},
+  doi       = {10.1145/3637528.3671536}
+}
+P237: % [17] najjar2024subfieldExplainability
+P238: @misc{najjar2024subfieldExplainability,
+  author       = {Najjar, Hiba and Miranda, Miro and Nuske, Marlon and Roscher, Ribana and Dengel, Andreas},
+  title        = {Explainability of Sub-Field Level Crop Yield Prediction using Remote Sensing},
+  year         = {2024},
+  eprint       = {2407.08274},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/2407.08274}
+}
+P239: % [18] choi2025recentTrends
+P240: @article{choi2025recentTrends,
+  author  = {Choi, J. W. and Hidayat, M. S. and Cho, S. B. and Hwang, W. H. and Lee, H. and Cho, B. K. and others},
+  title   = {Recent Trends in Machine Learning, Deep Learning, Ensemble Learning, and Explainable Artificial Intelligence Techniques for Evaluating Crop Yields Under Abnormal Climate Conditions},
+  journal = {Plants},
+  volume  = {14},
+  number  = {18},
+  pages   = {2841},
+  year    = {2025},
+  doi     = {10.3390/plants14182841}
+}
+P241: % [19] mohan2025nextGenXAI
+P242: @article{mohan2025nextGenXAI,
+  author  = {Mohan, R. N. V. J.},
+  title   = {Next-gen agriculture: integrating AI and XAI for precision crop yield predictions},
+  journal = {Frontiers in Plant Science},
+  volume  = {15},
+  pages   = {1451607},
+  year    = {2025},
+  doi     = {10.3389/fpls.2024.1451607}
+}
+P243: % [20] heino2023hotDryExtremes
+P244: @article{heino2023hotDryExtremes,
+  author  = {Heino, Matias and Kinnunen, Pekka and Anderson, Weston and Ray, Deepak K. and Puma, Michael J. and Varis, Olli and Siebert, Stefan and Kummu, Matti},
+  title   = {Increased probability of hot and dry weather extremes during the growing season threatens global crop yields},
+  journal = {Scientific Reports},
+  volume  = {13},
+  pages   = {3583},
+  year    = {2023},
+  doi     = {10.1038/s41598-023-29378-2}
+}
+P245: % [21] sjulgard2023swedenAnomalies
+P246: @article{sjulgard2023swedenAnomalies,
+  author  = {Sjulgard, H. and Keller, T. and Garland, G. and Colombi, T.},
+  title   = {Relationships between weather and yield anomalies vary with crop type and latitude in Sweden},
+  journal = {Agricultural Systems},
+  volume  = {211},
+  pages   = {103757},
+  year    = {2023},
+  doi     = {10.1016/j.agsy.2023.103757}
+}
+P247: % [22] heilemann2024lassoExtremes
+P248: @article{heilemann2024lassoExtremes,
+  author  = {Heilemann, Jasmin and Klassert, Christian and Samaniego, Luis and Thober, Stephan and Marx, Andreas and Boeing, Friedrich and Klauer, Bernd and Gawel, Erik},
+  title   = {Projecting impacts of extreme weather events on crop yields using LASSO regression},
+  journal = {Weather and Climate Extremes},
+  volume  = {46},
+  pages   = {100738},
+  year    = {2024},
+  doi     = {10.1016/j.wace.2024.100738}
+}
+P249: % [23] kabtih2025hotPluvial
+P250: @article{kabtih2025hotPluvial,
+  author  = {Kabtih, Abebe K. and Qian, Cheng},
+  title   = {Risk of successive hot-pluvial extremes on crop yield loss over global breadbasket regions},
+  journal = {Communications Earth \& Environment},
+  volume  = {6},
+  pages   = {1040},
+  year    = {2025},
+  doi     = {10.1038/s43247-025-02989-5}
+}
+P251: % [24] meng2024detrending
+P252: @article{meng2024detrending,
+  author  = {Meng, Huayue and Qian, Long},
+  title   = {Performances of different yield-detrending methods in assessing the impacts of agricultural drought and flooding: A case study in the middle-and-lower reach of the Yangtze River, China},
+  journal = {Agricultural Water Management},
+  volume  = {296},
+  pages   = {108812},
+  year    = {2024},
+  doi     = {10.1016/j.agwat.2024.108812}
+}
+P253: % [25] rudin2022blackboxBrief
+P254: @article{rudin2022blackboxBrief,
+  author  = {Rudin, Cynthia},
+  title   = {Why black box machine learning should be avoided for high-stakes decisions, in brief},
+  journal = {Nature Reviews Methods Primers},
+  volume  = {2},
+  number  = {1},
+  pages   = {81},
+  year    = {2022},
+  doi     = {10.1038/s43586-022-00172-0}
+}
+P255: % [26] nori2019interpretml
+P256: @misc{nori2019interpretml,
+  author       = {Nori, Harsha and Jenkins, Samuel and Koch, Paul and Caruana, Rich},
+  title        = {InterpretML: A Unified Framework for Machine Learning Interpretability},
+  year         = {2019},
+  eprint       = {1909.09223},
+  archivePrefix= {arXiv},
+  primaryClass = {cs.LG},
+  url          = {https://arxiv.org/abs/1909.09223}
+}
+P257: % [27] prokhorenkova2018catboost
+P258: @inproceedings{prokhorenkova2018catboost,
+  author    = {Prokhorenkova, Liudmila and Gusev, Gleb and Vorobev, Aleksandr and Dorogush, Anna Veronika and Gulin, Andrey},
+  title     = {CatBoost: unbiased boosting with categorical features},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {31},
+  pages     = {6639--6649},
+  year      = {2018},
+  url       = {https://papers.nips.cc/paper/7898-catboost-unbiased-boosting-with-categorical-features}
+}
+P259: % [28] ke2017lightgbm
+P260: @inproceedings{ke2017lightgbm,
+  author    = {Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan},
+  title     = {LightGBM: A Highly Efficient Gradient Boosting Decision Tree},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {30},
+  pages     = {3146--3154},
+  year      = {2017},
+  url       = {https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree}
+}
+P261: % [29] romano2019cqr
+P262: @inproceedings{romano2019cqr,
+  author    = {Romano, Yaniv and Patterson, Evan and Cand{\`e}s, Emmanuel},
+  title     = {Conformalized Quantile Regression},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {32},
+  year      = {2019},
+  eprint    = {1905.03222},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1905.03222}
+}
+P263: % [30] angelopoulos2023conformal
+P264: @article{angelopoulos2023conformal,
+  author  = {Angelopoulos, Anastasios N. and Bates, Stephen},
+  title   = {Conformal Prediction: A Gentle Introduction},
+  journal = {Foundations and Trends in Machine Learning},
+  volume  = {16},
+  number  = {4},
+  pages   = {494--591},
+  year    = {2023},
+  doi     = {10.1561/2200000101}
+}
+P265: 7. Gợi ý chọn references cho bản 12 trang
+P266: Nếu giới hạn 12 trang, không cần cite hết 30 refs. Nên ưu tiên khoảng 18-24 refs trong main paper.
+P267: Core data refs: ABARES, SILO, SLGA. Core problem refs: Hochman/Feng, Anderson, Meroni, Schierhorn, Heino. Core method refs: EBM/InterpretML, CatBoost hoặc LightGBM, conformal prediction nếu có interval.
+P268: Các preprint như Bansal, Pathak, Najjar nên dùng ít và chỉ dùng khi thật sự cần hỗ trợ ý về heterogeneous inputs hoặc stage-wise explainability.
+P269: Không nên cite quá nhiều ref SHAP/LIME/ALE/permutation vì bài Úc đang cố tránh trùng hướng multi-method XAI của paper Mỹ.
+tables 1
+TABLE 1 rows 31 cols 5
+# | BibTeX key | Year | Nhóm | Dùng chính ở đâu
+1 | abares2026australianCropReport | 2026 | Nguồn dữ liệu Úc / yield panel | Rất nên cite trong Data
+2 | jeffrey2001silo | 2001 | Nguồn dữ liệu Úc / SILO weather | Rất nên cite trong Data
+3 | grundy2015slga | 2015 | Nguồn dữ liệu Úc / soil | Rất nên cite trong Data
+4 | hochman2017climateTrendsAustralia | 2017 | Bối cảnh Úc / wheat và climate trend | Nên cite trong Introduction/Discussion
+5 | feng2019droughtHeatAustralia | 2019 | Bối cảnh Úc / drought-heat impact | Nên cite trong Introduction/Feature engineering
+6 | vanKlompenburg2020systematicReview | 2020 | ML crop yield review / nền tảng | Nền tảng, cite vừa đủ
+7 | paudel2021largeScaleYield | 2021 | ML crop yield forecasting | Nền tảng gần đây
+8 | meroni2021smallData | 2021 | Small data / grains forecasting | Nên cite vì dataset yield của bạn nhỏ
+9 | schierhorn2021developmentalStages | 2021 | Stage-aware weather features | Rất nên cite trong Feature engineering
+10 | anderson2024preseasonWarning | 2024 | Early warning / lead time forecasting | Core reference cho hướng bài
+11 | paudel2022weaklySupervised | 2022 | Spatial scale / weak supervision | Bổ trợ, không nên làm backbone
+12 | paudel2023interpretability | 2023 | Interpretability in crop forecasting | Nên cite nếu dùng interpretable/transparent model
+13 | declercq2024indiaRice | 2024 | ML yield prediction / dashboard decision support | Nên cite trong Related Work/Decision support
+14 | bansal2023winterWheatHeterogeneous | 2023 | Heterogeneous data / winter wheat | Bổ trợ
+15 | pathak2023inputModalities | 2023 | Input modalities / weather-soil integration | Bổ trợ
+16 | lin2024cropnet | 2024 | Large-scale crop dataset / multi-modal benchmarking | Nên cite nếu nói dataset/benchmarking
+17 | najjar2024subfieldExplainability | 2024 | Explainability / growth stage relevance | Bổ trợ nếu cần XAI nhẹ
+18 | choi2025recentTrends | 2025 | Recent review / abnormal climate | Nên cite trong Related Work
+19 | mohan2025nextGenXAI | 2025 | AI/XAI agriculture | Có thể cite trong Discussion/Transparency
+20 | heino2023hotDryExtremes | 2023 | Extreme weather / compound heat-drought | Rất nên cite trong Feature engineering/Discussion
+21 | sjulgard2023swedenAnomalies | 2023 | Weather-yield anomalies / crop-region variation | Nên cite nếu nói crop-specific vulnerability
+22 | heilemann2024lassoExtremes | 2024 | Extreme weather modelling | Nên cite trong Related Work/Methods
+23 | kabtih2025hotPluvial | 2025 | Compound extremes / breadbasket risk | Có thể cite trong Discussion
+24 | meng2024detrending | 2024 | Detrending / yield shortfall target | Cite nếu dùng detrended yield/shortfall
+25 | rudin2022blackboxBrief | 2022 | Interpretability / high-stakes decisions | Core nếu claim decision support
+26 | nori2019interpretml | 2019 | Glassbox / Explainable Boosting Machine | Nền tảng cho EBM
+27 | prokhorenkova2018catboost | 2018 | Model foundation / CatBoost | Nền tảng cho CatBoost
+28 | ke2017lightgbm | 2017 | Model foundation / LightGBM | Nền tảng cho LightGBM/quantile boosting
+29 | romano2019cqr | 2019 | Uncertainty / conformalized quantile regression | Core nếu dùng prediction intervals
+30 | angelopoulos2023conformal | 2023 | Uncertainty / conformal prediction | Core nếu dùng uncertainty/calibration

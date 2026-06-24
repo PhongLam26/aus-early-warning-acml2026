@@ -1,0 +1,35 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local editor metadata
+.vscode/
+
+# LaTeX build artifacts
+paper_acml/*.aux
+paper_acml/*.bbl
+paper_acml/*.blg
+paper_acml/*.log
+paper_acml/*.out
+paper_acml/*.toc
+paper_acml/*.txt
+paper_acml/main_revision.*
+paper_acml/main_layout_fixed.*
+paper_acml/layout_check_page-*.png
+paper_acml/acml26_submission_template.pdf
+
+# Large or redundant generated snapshots
+outputs/safe_versions/
+
+# Weather download cache can be regenerated from the per-state files.
+data/raw/daily_weather/cache/
+
+# Local planning/template source files not needed by external viewers.
+ACML_camera_ready.zip
+*.docx

@@ -1,0 +1,8 @@
+feature_set,n_features,uses_production_kt,uses_area_000ha,uses_lag_feature
+identity_time_only,3,False,False,False
+weather_stage_only,33,False,False,False
+weather_plus_anomaly,51,False,False,False
+weather_plus_soil,55,False,False,False
+weather_anomaly_soil_no_lag,73,False,False,False
+lag_yield_only,6,False,False,True
+full_operational,76,False,False,True

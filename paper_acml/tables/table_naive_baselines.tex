@@ -1,0 +1,12 @@
+\begin{tabular}{llrr}
+\toprule
+Model & Information rule & May-Oct RMSE & May-Oct R2 \\
+\midrule
+3-year rolling past mean & past-only chronological & 0.779 & 0.622 \\
+Previous-year yield & past-only chronological & 0.784 & 0.616 \\
+Crop-region train trend & train-only & 0.823 & 0.577 \\
+Crop-region train mean & train-only & 0.961 & 0.423 \\
+History-free weather-soil & validation-selected Ridge & 0.889 & 0.507 \\
+Operational model & validation-selected Ridge & 0.658 & 0.730 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,11 @@
+\begin{tabular}{lllrrrrrr}
+\toprule
+Window & Model & Strategy & Thr. & Prec. & Recall & F1 & ROC-AUC & PR-AUC \\
+\midrule
+May-Jun & CatBoost & best\_f1 & 0.14 & 0.205 & 0.889 & 0.333 & 0.507 & 0.195 \\
+May-Jul & LightGBM & best\_f1 & 0.30 & 0.271 & 0.704 & 0.392 & 0.630 & 0.250 \\
+May-Aug & LogisticRegression & precision\_ge\_0\_3 & 0.22 & 0.273 & 0.778 & 0.404 & 0.648 & 0.253 \\
+May-Sep & HistGradientBoosting & best\_f1 & 0.63 & 0.282 & 0.741 & 0.408 & 0.694 & 0.269 \\
+May-Oct & LogisticRegression & precision\_ge\_0\_3 & 0.27 & 0.469 & 0.556 & 0.508 & 0.797 & 0.390 \\
+\bottomrule
+\end{tabular}

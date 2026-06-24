@@ -1,0 +1,16 @@
+\begin{tabular}{lllrrr}
+\toprule
+Window & Feature set & Model & MAE & RMSE & R2 \\
+\midrule
+May-Jun & Weather+Anom+Soil & LightGBM & 0.658 & 0.921 & 0.470 \\
+May-Jul & Weather+Anom+Soil & CatBoost & 0.669 & 0.962 & 0.423 \\
+May-Aug & Weather+Anom+Soil & LightGBM & 0.621 & 0.975 & 0.407 \\
+May-Sep & Weather+Anom+Soil & LightGBM & 0.621 & 0.946 & 0.441 \\
+May-Oct & Weather+Anom+Soil & Ridge & 0.536 & 0.889 & 0.507 \\
+May-Jun & Operational & ElasticNet & 0.545 & 0.721 & 0.676 \\
+May-Jul & Operational & ElasticNet & 0.515 & 0.702 & 0.693 \\
+May-Aug & Operational & ElasticNet & 0.523 & 0.734 & 0.664 \\
+May-Sep & Operational & ElasticNet & 0.478 & 0.704 & 0.690 \\
+May-Oct & Operational & Ridge & 0.424 & 0.658 & 0.730 \\
+\bottomrule
+\end{tabular}

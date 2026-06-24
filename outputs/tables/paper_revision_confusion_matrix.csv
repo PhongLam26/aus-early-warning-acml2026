@@ -1,0 +1,2 @@
+forecast_window,model,strategy,threshold,TN,FP,FN,TP,precision,recall,F1,n_test
+May-Oct,LogisticRegression,precision_ge_0_3,0.27,105,17,12,15,0.46875,0.5555555555555556,0.5084745762711864,149

@@ -1,0 +1,17 @@
+protocol,feature_set,model,mean_RMSE,mean_R2,folds
+leave_one_crop_out,full_operational,Ridge,0.7313359629349558,0.5199283881231307,5
+leave_one_crop_out,full_operational,LightGBM,0.8752455556538844,0.34902323263741253,5
+leave_one_crop_out,weather_anomaly_soil_no_lag,Ridge,1.0707664379489523,0.066546245623804,5
+leave_one_crop_out,weather_anomaly_soil_no_lag,LightGBM,1.2080753995904567,-0.1923909986161295,5
+leave_one_region_out,full_operational,Ridge,0.8231445610085084,-0.3562192922010015,6
+leave_one_region_out,full_operational,LightGBM,0.9023849836569174,-0.06350835507489062,6
+leave_one_region_out,weather_anomaly_soil_no_lag,LightGBM,0.9743781255690226,-0.2850686446079508,6
+leave_one_region_out,weather_anomaly_soil_no_lag,Ridge,1.1703994597598883,-1.5784348370572647,6
+rolling_origin,full_operational,Ridge,0.5157908076985456,0.6978578553135245,3
+rolling_origin,full_operational,LightGBM,0.52671671116801,0.6891627536802319,3
+rolling_origin,weather_anomaly_soil_no_lag,LightGBM,0.5777036001895967,0.6310894650109088,3
+rolling_origin,weather_anomaly_soil_no_lag,Ridge,0.6775096359504507,0.48757650480712733,3
+time_split,full_operational,Ridge,0.7159027161042709,0.6794144890761725,1
+time_split,full_operational,LightGBM,0.8623097481238784,0.5356227571112495,1
+time_split,weather_anomaly_soil_no_lag,LightGBM,0.9626596851158837,0.4199182373793978,1
+time_split,weather_anomaly_soil_no_lag,Ridge,0.9772234160526748,0.4025436642229761,1
