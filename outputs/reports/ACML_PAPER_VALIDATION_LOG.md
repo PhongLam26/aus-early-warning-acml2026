@@ -29,9 +29,11 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 - Remaining warnings are underfull line-break warnings from figure/table placement and long bibliography URLs. The terminal also reports MiKTeX's local update advisory, which is not a manuscript error.
 - `acml26.bib` contains 30 BibTeX entries regenerated from `Tong_hop_ref_bai_Uc_Early_Warning.docx`.
 - Hyperlinks are configured with hidden/black link styling, so bibliography URLs do not render in magenta.
+- In-text citations and bibliography entries now use bracketed numeric references.
 - The stress-validation table was compacted to one best model per validation protocol and feature regime, and float barriers were added so the stress heatmap no longer occupies a mostly empty page.
 - The P0+P1 revision adds naive baselines, fixed-model lead-time checks, target-threshold sensitivity, a held-out confusion matrix, a top-10 analyst watch list, compact uncertainty diagnostics, and a split feature-importance figure.
-- Detailed classification, residual-check, precision-recall, threshold-tradeoff, and interval-coverage artifacts are retained in project outputs; the manuscript appendix keeps only compact tables to stay at the 16-page limit.
+- Detailed classification, residual-check, precision-recall, threshold-tradeoff, and interval-coverage artifacts are retained in project outputs for reproducibility.
+- The manuscript no longer contains the prior meta sentence about the anonymous manuscript keeping compact appendix tables.
 - During the latest validation run, `paper_acml/main.pdf`, the handoff PDF, source zip, and OpenReview package were all refreshed successfully from the follow-up revision build.
 - Follow-up revision from `Loi_can_sua_tiep_bai_Uc_Early_Warning.docx` was applied: the manuscript no longer claims that the history-free weather-soil model outperforms identity/time or historical baselines.
 - Figure 1 was upgraded from a simple timeline to a workflow showing inputs, stage windows, model regimes, and monitoring outputs.
