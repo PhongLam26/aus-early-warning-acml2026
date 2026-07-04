@@ -101,19 +101,20 @@ For agricultural risk monitoring, the output is used to prioritize attention rat
 
 The analysis unit is a region-crop-year observation. The yield panel is derived from the ABARES Australian Crop Report state crop data workbook \path{03_AustCropRrt20260303_StateCropData_v1.0.0.xlsx}, accessed on 4 July 2026 \citep{abares2026australianCropReport}. After filtering to five winter crops and six state-level regions, the panel contains 966 observed entries for harvest years 1989--2021 (Figure~\ref{fig:study-regions}; Table~\ref{tab:data-summary}). Each yield observation is expanded over five forecast windows, giving 4,830 window rows. This expansion does not create new yield outcomes: models and metrics are evaluated within forecast windows, and all train/validation/test decisions are made by calendar year so the same region-crop-year outcome cannot be split across evaluation periods.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.86\textwidth]{figures/fig01_australia_study_regions.pdf}
 \caption{Study regions and panel coverage for the Australian winter-crop benchmark. The panel contains 966 observed region-crop-year entries from six state-level regions, five winter crops, and harvest years 1989--2021. QLD and TAS have fewer observed entries because some crop-region-year source records are missing; the benchmark uses state-level regional weather exposure proxies and does not claim crop-area-weighted gridded exposure.}
 \label{fig:study-regions}
 \end{figure}
 
-\begin{table}[t]
+\begin{table}[H]
 \centering
 \caption{Data summary for the Australian winter crop early-warning panel.}
 \label{tab:data-summary}
 \input{tables/table_data_summary.tex}
 \end{table}
+\FloatBarrier
 
 Daily weather is taken from SILO/LongPaddock Australian climate records, which are based on spatial interpolation of observed weather data \citep{jeffrey2001silo}. The raw project tables retain daily state-level regional series with latitude and longitude metadata; the current benchmark aggregates these regional daily series by forecast cutoff as a state-level exposure proxy and does not claim crop-area-weighted gridded exposure. We use daily rainfall, maximum and minimum temperature, radiation, evaporation, and vapor pressure to build cutoff-specific summaries. Soil covariates are static regional background attributes from ASRIS/Soil and Landscape Grid of Australia \citep{grundy2015slga}. They include available water capacity, bulk density, clay, sand, silt, soil organic carbon, total nitrogen, total phosphorus, pH, cation exchange capacity, depth of soil, and depth of regolith, summarized as topsoil/subsoil or regional aggregates where available. Because these soil summaries are region-level and static, they are treated as background vulnerability covariates, not as farm-level measurements or causal soil interventions.
 
