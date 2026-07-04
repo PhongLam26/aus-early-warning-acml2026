@@ -89,12 +89,17 @@ Early-warning studies differ from generic yield prediction because lead time is 
 
 \subsection{Stage-Aware Weather and Extreme-Event Features}
 
-Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence also emphasizes compound hot-dry extremes, crop-specific vulnerability, and heterogeneous regional responses \citep{heino2023hotDryExtremes,sjulgard2023swedenAnomalies}. We therefore aggregate daily weather into stage-aware rainfall, heat, cold, evaporative-demand, radiation, and compound-stress features rather than relying only on full-season averages. Recent extreme-weather yield studies further motivate sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{heilemann2024lassoExtremes,kabtih2025hotPluvial}.
+Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence emphasizes compound hot-dry extremes, crop-specific vulnerability, heterogeneous regional responses, and sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{heino2023hotDryExtremes,sjulgard2023swedenAnomalies,heilemann2024lassoExtremes,kabtih2025hotPluvial}. This motivates stage-aware rather than full-season weather summaries.
 
 \subsection{Interpretability, Uncertainty, and Decision Support}
+\vspace{-0.6em}
 
 For agricultural risk monitoring, the output is used to prioritize attention rather than to prove a mechanistic causal pathway. Interpretability and uncertainty are therefore practical requirements, especially when models inform public or business decisions \citep{rudin2022blackboxBrief,paudel2023interpretability}. We use transparent ablation, group permutation importance, and simple lead-time comparisons rather than making the paper a post-hoc XAI study. Explainable boosting and related glassbox tools provide one route for transparent tabular modeling \citep{nori2019interpretml}, while conformal and conformalized quantile methods motivate distribution-aware intervals with explicit coverage diagnostics \citep{romano2019cqr,angelopoulos2023conformal}.
 
+\vspace{0.3em}
+Together, these strands motivate an evaluation-centered benchmark rather than a single-algorithm comparison. The design below therefore emphasizes chronological leakage control, staged information sets, explicit separation between weather-soil evidence and yield-history memory, and diagnostic checks for classification and uncertainty.
+
+\clearpage
 \section{Methodology}
 
 \subsection{Study Setting and Data}
