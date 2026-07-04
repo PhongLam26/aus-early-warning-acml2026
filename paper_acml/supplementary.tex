@@ -4,9 +4,11 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{float}
+\usepackage{placeins}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \jmlryear{2026}
 \jmlrworkshop{ACML 2026}
 \jmlrvolume{}
@@ -14,6 +16,7 @@
 \makeatletter
 \renewcommand*{\@titlefoot}{}
 \gdef\@editor{}
+\let\cleardoublepage\clearpage
 \def\ps@jmlrtps{%
   \let\@mkboth\@gobbletwo
   \def\@oddhead{}%
@@ -28,7 +31,7 @@
 \begin{document}
 \maketitle
 
-\section{Fixed-Model and Target Checks}
+\section{Fixed-Model and Feature-Regime Details}
 
 \begin{table}[H]
 \centering
@@ -38,15 +41,38 @@
 
 \begin{table}[H]
 \centering
+\caption{Feature groups used for stage-aware early-warning models.}
+\resizebox{\textwidth}{!}{\input{tables/table_feature_groups.tex}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Feature-regime definitions used for ablation and information-source analysis.}
+\resizebox{\textwidth}{!}{\input{tables/table_ablation_compact.tex}}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig13_ablation_r2_delta_by_feature_set.png}
+\caption{Ablation heatmap showing $R^2$ differences relative to the full operational feature set. Short labels are used to keep the dense comparison readable.}
+\end{figure}
+\FloatBarrier
+
+\section{Data Coverage and Baseline Suite}
+
+\begin{table}[H]
+\centering
 \caption{Missing source yield entries by state-crop series. The total confirms 966 observed entries out of 990 possible state-crop-year combinations in 1989--2021 for the observed crop-region pairs.}
 \input{tables/table_missing_counts.tex}
 \end{table}
 
 \input{tables/table_baselines_full_appendix.tex}
 
+Full baseline-suite metrics remain available in the accompanying CSV artifacts; the PDF keeps the compact summary to preserve readability.
+
 \section{Data and Implementation Details}
 
-The raw yield source is the ABARES Australian Crop Report state-crop-data workbook; the modeled panel is the derived \texttt{yield\_panel.csv}. Fields used are crop area, production, and yield in tonnes per hectare, filtered to the five winter crops and six state-level regions in the main paper. The harvest year is represented by \texttt{year\_start}. Production and area are retained for audit but excluded from model features.
+The raw yield source is the ABARES Australian Crop Report state-crop-data workbook \path{03_AustCropRrt20260303_StateCropData_v1.0.0.xlsx}, accessed on 4 July 2026; the modeled panel is the derived \texttt{yield\_panel.csv}. Fields used are crop area, production, and yield in tonnes per hectare, filtered to the five winter crops and six state-level regions in the main paper. The harvest year is represented by \texttt{year\_start}. Production and area are retained for audit but excluded from model features.
 
 SILO/LongPaddock weather inputs are daily rainfall, maximum and minimum temperature, radiation, evaporation, and vapor pressure. They are aggregated from May through each forecast cutoff. The benchmark uses state-level regional daily series as a monitoring exposure proxy; latitude and longitude metadata are retained, but no crop-area-weighted gridded exposure is claimed. Weather-deviation features use training years only: for feature value $x_{r,w,t}$, the deviation is $x_{r,w,t}-\bar{x}_{r,w}^{train}$ for the same region and forecast window. Soil/ASRIS attributes are static regional background covariates from the Soil and Landscape Grid of Australia, including available water capacity, texture, bulk density, soil organic carbon, nutrients, pH, cation exchange capacity, and depth variables. These features condition regional vulnerability and may partly proxy region identity.
 
@@ -57,6 +83,8 @@ The no-yield-history regime has 73 predictors before one-hot expansion: crop, st
 The internal baseline suite is run once with random seed 42. This single-seed design is a limitation; model selection is by validation RMSE within each forecast window and feature regime, and test metrics are reported once. Tabular preprocessing uses median imputation and standard scaling for numeric predictors, one-hot encoding for crop and region, and unknown-category handling in held-out stress tests. The suite uses scikit-learn 1.9.0, XGBoost 3.3.0, LightGBM 4.6.0, CatBoost 1.2.10, pyGAM 0.12.0, and PyTorch 2.12.1+cpu in the recorded run.
 
 Candidate models include Ridge with alpha 1.0 or 3.0; ElasticNet with alpha 0.01/l1 ratio 0.2 or alpha 0.03/l1 ratio 0.4; RandomForest with 400 trees and either unrestricted depth/min leaf 3 or depth 8/min leaf 5; SVR-RBF with C 1 or 10 and epsilon 0.1; HistGradientBoosting; XGBoost; LightGBM; CatBoost; and a pyGAM additive model over transformed features. The GRU sequence comparator uses daily weather up to the cutoff window, static covariates concatenated after the sequence encoder, and for the operational regime adds lag/rolling/expanding yield-history features to the static block. Two GRU configurations are validation-selected: hidden size 16 or 32, dropout 0.15 or 0.20, Adam learning rate 0.001, weight decay 1e-4, up to 160 epochs with patience 16.
+
+\section{Classification and Uncertainty Details}
 
 \begin{table}[H]
 \centering
@@ -70,7 +98,17 @@ Candidate models include Ridge with alpha 1.0 or 3.0; ElasticNet with alpha 0.01
 \resizebox{\textwidth}{!}{\input{tables/table_classification_summary.tex}}
 \end{table}
 
-\section{Uncertainty Diagnostics}
+\begin{table}[H]
+\centering
+\caption{Low-yield-risk confusion matrix using validation-selected thresholds.}
+\resizebox{\textwidth}{!}{\input{tables/table_confusion_matrix.tex}}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Held-out May-Oct ranked watch-list example. Rank scores are uncalibrated classifier scores used for ordering analyst-review lists and should not be interpreted as fully calibrated event probabilities. Observed indicates the held-out low-yield-risk label.}
+\resizebox{\textwidth}{!}{\input{tables/table_watch_list_top10.tex}}
+\end{table}
 
 Coverage below the nominal 80\% target, especially in later windows, is interpreted as temporal calibration difficulty under small validation samples. These intervals are diagnostics for analyst review rather than reliable calibrated intervals for automatic decisions.
 
@@ -79,5 +117,19 @@ Coverage below the nominal 80\% target, especially in later windows, is interpre
 \caption{Compact conformal uncertainty diagnostics by forecast window. Coverage and interval width are evaluated on held-out test years after validation-period calibration.}
 \resizebox{\textwidth}{!}{\input{tables/table_uncertainty_summary.tex}}
 \end{table}
+
+\section{Supplementary Figures}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/fig14_stress_validation_heatmap.png}
+\caption{Stress validation heatmap by validation protocol and feature regime. Values use the same best-model, all-window summary as the main-paper stress validation table, not single-window May-Oct scores.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/fig19_feature_importance_split.png}
+\caption{Feature group importance measured as mean RMSE increase after group permutation. Operational importance should not be interpreted as within-season weather importance because lag-yield features are allowed in that regime.}
+\end{figure}
 
 \end{document}

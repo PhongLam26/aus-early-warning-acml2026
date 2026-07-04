@@ -612,19 +612,28 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
     full = best[best["feature_set"] == "full_operational"][["forecast_window", "R2"]].rename(columns={"R2": "full_R2"})
     delta = best.merge(full, on="forecast_window", how="left")
     delta["r2_delta_vs_full"] = delta["R2"] - delta["full_R2"]
-    delta["feature_label"] = delta["feature_set"].map(FEATURE_LABELS)
+    compact_delta_labels = {
+        "identity_time_only": "Identity",
+        "weather_anomaly_soil_no_lag": "NYH",
+        "full_operational": "Operational",
+        "weather_stage_only": "Weather",
+        "weather_plus_anomaly": "Weather+Dev",
+        "weather_plus_soil": "Weather+Soil",
+        "lag_yield_only": "Yield hist.",
+    }
+    delta["feature_label"] = delta["feature_set"].map(compact_delta_labels)
     pivot = delta.pivot(index="forecast_window", columns="feature_label", values="r2_delta_vs_full").reindex(sorted(order, key=order.get))
     column_order = [
-        "Identity+Time",
-        "No-yield-history weather-soil",
-        "Operational with yield history",
+        "Identity",
+        "NYH",
+        "Operational",
         "Weather",
         "Weather+Dev",
         "Weather+Soil",
-        "Yield history",
+        "Yield hist.",
     ]
     pivot = pivot[[column for column in column_order if column in pivot.columns]]
-    fig, ax = plt.subplots(figsize=(12.8, 5.6))
+    fig, ax = plt.subplots(figsize=(12.8, 4.9))
     norm = TwoSlopeNorm(vmin=float(np.nanmin(pivot.values)), vcenter=0.0, vmax=max(0.001, float(np.nanmax(pivot.values))))
     im = ax.imshow(pivot.values, cmap="RdBu", norm=norm, aspect="auto")
     ax.set_xticks(np.arange(len(pivot.columns)))
@@ -637,9 +646,9 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
             if pd.notna(value):
                 ax.text(j, i, f"{value:.2f}", ha="center", va="center", fontsize=10.5, color="#1f1f1f")
     cbar = fig.colorbar(im, ax=ax, fraction=0.035, pad=0.02)
-    cbar.set_label("R2 delta", fontsize=11)
+    cbar.set_label("R$^2$ delta", fontsize=11)
     cbar.ax.tick_params(labelsize=10)
-    ax.set_title("R2 Delta Versus Full Operational Model", fontsize=15)
+    ax.set_title("R$^2$ Delta Versus Full Operational Model", fontsize=15)
     ax.set_xlabel("Feature regime", fontsize=12)
     ax.set_ylabel("Forecast window", fontsize=12)
     ax.set_xticks(np.arange(-0.5, len(pivot.columns), 1), minor=True)

@@ -5,13 +5,14 @@
 - `paper_dir`: D:\00_Major\K4\DAP\AUS_project\paper_acml
 - `source_zip`: D:\00_Major\K4\DAP\AUS_project\outputs\reports\acml2026_aus_early_warning_anonymous_source.zip
 - `safe_round2_snapshot`: D:\00_Major\K4\DAP\AUS_project\outputs\safe_versions\round2_safe_2026_06_24
-- `figures_copied`: 6
+- `figures_copied`: 7
 - `anonymous_author_block`: yes
 - `main_claim_source`: round2_safe_2026_06_24
 
 ## Figure Mapping
 
-- `fig01_framework_timeline.png` -> `paper_acml/figures/fig01_framework_timeline.png`
+- `fig01_australia_study_regions.pdf` -> `paper_acml/figures/fig01_australia_study_regions.pdf`
+- `fig01_australia_study_regions.png` -> `paper_acml/figures/fig01_australia_study_regions.png`
 - `fig16_paper_safe_vs_operational_model.png` -> `paper_acml/figures/fig16_paper_safe_vs_operational_model.png`
 - `fig13_ablation_r2_delta_by_feature_set.png` -> `paper_acml/figures/fig13_ablation_r2_delta_by_feature_set.png`
 - `fig14_stress_validation_heatmap.png` -> `paper_acml/figures/fig14_stress_validation_heatmap.png`
