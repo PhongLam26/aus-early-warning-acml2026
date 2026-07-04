@@ -1,0 +1,5846 @@
+{
+  "seed": 42,
+  "splits": {
+    "train_start": 1989,
+    "train_end": 2012,
+    "validation_start": 2013,
+    "validation_end": 2016,
+    "test_start": 2017,
+    "test_end": 2021
+  },
+  "split_counts": {
+    "train": 701,
+    "test": 149,
+    "validation": 116
+  },
+  "split_ids": [
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2017,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2018,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2019,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2020,
+      "split": "test"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2021,
+      "split": "test"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1989,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1990,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1991,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1992,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1993,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1994,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1995,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1996,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1997,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1998,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 1999,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2000,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2001,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2002,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2003,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2004,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2005,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2006,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2007,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2008,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2009,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2010,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2011,
+      "split": "train"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2012,
+      "split": "train"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "New South Wales",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Queensland",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "South Australia",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Tasmania",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Victoria",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Barley",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Canola",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Lupins",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Oats",
+      "year_start": 2016,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2013,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2014,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2015,
+      "split": "validation"
+    },
+    {
+      "region": "Western Australia",
+      "crop": "Wheat",
+      "year_start": 2016,
+      "split": "validation"
+    }
+  ],
+  "forecast_windows": [
+    "May-Jun",
+    "May-Jul",
+    "May-Aug",
+    "May-Sep",
+    "May-Oct"
+  ],
+  "availability": {
+    "xgboost": true,
+    "lightgbm": true,
+    "catboost": true,
+    "interpret": false,
+    "pygam": true,
+    "torch": true
+  },
+  "package_versions": {
+    "python": "3.12.10",
+    "python_executable": "D:\\_env_python\\aus_acml_baselines\\Scripts\\python.exe",
+    "numpy": "2.5.0",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "xgboost": "3.3.0",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.10",
+    "interpret": null,
+    "pygam": "0.12.0",
+    "torch": "2.12.1"
+  },
+  "feature_regimes": {
+    "no_yield_history_weather_soil": "weather, train-derived weather deviations, soil, crop, region, year; no lagged yield",
+    "operational_with_yield_history": "no-yield-history features plus lagged/rolling/expanding past yield"
+  }
+}

@@ -26,7 +26,7 @@ from common import configured_path, ensure_output_dirs, load_config, markdown_ta
 
 WINDOW_ORDER = ["May-Jun", "May-Jul", "May-Aug", "May-Sep", "May-Oct"]
 FEATURE_LABELS = {
-    "weather_anomaly_soil_no_lag": "History-free weather-soil",
+    "weather_anomaly_soil_no_lag": "No-yield-history weather-soil",
     "full_operational": "Operational with yield history",
 }
 REVISION_DIR_NAME = "paper_revision_support_2026_06_24"
@@ -382,7 +382,7 @@ def write_revision_report(report_dir: Path, outputs: dict[str, pd.DataFrame]) ->
             "- Naive historical baselines use train-only means/trends or past-only chronological yield values.",
             "- Confusion matrix and watch-list use May-Oct validation-selected classification threshold only.",
             "- Uncertainty summary prioritizes conformal intervals and keeps coverage/width as diagnostics.",
-            "- Feature-importance figure separates operational lag-history importance from history-free weather-soil importance.",
+            "- Feature-importance figure separates operational lag-history importance from no-yield-history weather-soil importance.",
             "",
             "## Preview: May-Oct Watch List",
             "",

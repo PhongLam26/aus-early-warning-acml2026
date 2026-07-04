@@ -43,7 +43,7 @@ def figure_framework(config: dict) -> None:
     boxes = [
         (0.04, 0.44, 0.20, 0.34, "Inputs at cutoff", "Daily weather to cutoff\n+ soil background\n+ crop-region identity", "#e6f4f1"),
         (0.29, 0.44, 0.20, 0.34, "Stage windows", "May-Jun, May-Jul,\nMay-Aug, May-Sep,\nMay-Oct", "#fff3bf"),
-        (0.54, 0.44, 0.20, 0.34, "Model regimes", "History-free weather-soil\nOperational with\nlagged yield", "#e8f0fe"),
+        (0.54, 0.44, 0.20, 0.34, "Model regimes", "NYH weather-soil\nOperational with\nlagged yield", "#e8f0fe"),
         (0.79, 0.44, 0.17, 0.34, "Monitoring output", "Yield forecast\nRisk score\nInterval\nWatch list", "#fde2e1"),
     ]
     for args in boxes:

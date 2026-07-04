@@ -1,0 +1,967 @@
+region,crop,year_start,split
+New South Wales,Barley,2017,test
+New South Wales,Barley,2018,test
+New South Wales,Barley,2019,test
+New South Wales,Barley,2020,test
+New South Wales,Barley,2021,test
+New South Wales,Canola,2017,test
+New South Wales,Canola,2018,test
+New South Wales,Canola,2019,test
+New South Wales,Canola,2020,test
+New South Wales,Canola,2021,test
+New South Wales,Lupins,2017,test
+New South Wales,Lupins,2018,test
+New South Wales,Lupins,2019,test
+New South Wales,Lupins,2020,test
+New South Wales,Lupins,2021,test
+New South Wales,Oats,2017,test
+New South Wales,Oats,2018,test
+New South Wales,Oats,2019,test
+New South Wales,Oats,2020,test
+New South Wales,Oats,2021,test
+New South Wales,Wheat,2017,test
+New South Wales,Wheat,2018,test
+New South Wales,Wheat,2019,test
+New South Wales,Wheat,2020,test
+New South Wales,Wheat,2021,test
+Queensland,Barley,2017,test
+Queensland,Barley,2018,test
+Queensland,Barley,2019,test
+Queensland,Barley,2020,test
+Queensland,Barley,2021,test
+Queensland,Canola,2017,test
+Queensland,Canola,2018,test
+Queensland,Canola,2019,test
+Queensland,Canola,2020,test
+Queensland,Canola,2021,test
+Queensland,Lupins,2017,test
+Queensland,Lupins,2018,test
+Queensland,Lupins,2019,test
+Queensland,Lupins,2020,test
+Queensland,Lupins,2021,test
+Queensland,Oats,2017,test
+Queensland,Oats,2018,test
+Queensland,Oats,2019,test
+Queensland,Oats,2020,test
+Queensland,Oats,2021,test
+Queensland,Wheat,2017,test
+Queensland,Wheat,2018,test
+Queensland,Wheat,2019,test
+Queensland,Wheat,2020,test
+Queensland,Wheat,2021,test
+South Australia,Barley,2017,test
+South Australia,Barley,2018,test
+South Australia,Barley,2019,test
+South Australia,Barley,2020,test
+South Australia,Barley,2021,test
+South Australia,Canola,2017,test
+South Australia,Canola,2018,test
+South Australia,Canola,2019,test
+South Australia,Canola,2020,test
+South Australia,Canola,2021,test
+South Australia,Lupins,2017,test
+South Australia,Lupins,2018,test
+South Australia,Lupins,2019,test
+South Australia,Lupins,2020,test
+South Australia,Lupins,2021,test
+South Australia,Oats,2017,test
+South Australia,Oats,2018,test
+South Australia,Oats,2019,test
+South Australia,Oats,2020,test
+South Australia,Oats,2021,test
+South Australia,Wheat,2017,test
+South Australia,Wheat,2018,test
+South Australia,Wheat,2019,test
+South Australia,Wheat,2020,test
+South Australia,Wheat,2021,test
+Tasmania,Barley,2017,test
+Tasmania,Barley,2018,test
+Tasmania,Barley,2019,test
+Tasmania,Barley,2020,test
+Tasmania,Barley,2021,test
+Tasmania,Canola,2017,test
+Tasmania,Canola,2018,test
+Tasmania,Canola,2019,test
+Tasmania,Canola,2020,test
+Tasmania,Canola,2021,test
+Tasmania,Lupins,2017,test
+Tasmania,Lupins,2018,test
+Tasmania,Lupins,2019,test
+Tasmania,Lupins,2020,test
+Tasmania,Oats,2017,test
+Tasmania,Oats,2018,test
+Tasmania,Oats,2019,test
+Tasmania,Oats,2020,test
+Tasmania,Oats,2021,test
+Tasmania,Wheat,2017,test
+Tasmania,Wheat,2018,test
+Tasmania,Wheat,2019,test
+Tasmania,Wheat,2020,test
+Tasmania,Wheat,2021,test
+Victoria,Barley,2017,test
+Victoria,Barley,2018,test
+Victoria,Barley,2019,test
+Victoria,Barley,2020,test
+Victoria,Barley,2021,test
+Victoria,Canola,2017,test
+Victoria,Canola,2018,test
+Victoria,Canola,2019,test
+Victoria,Canola,2020,test
+Victoria,Canola,2021,test
+Victoria,Lupins,2017,test
+Victoria,Lupins,2018,test
+Victoria,Lupins,2019,test
+Victoria,Lupins,2020,test
+Victoria,Lupins,2021,test
+Victoria,Oats,2017,test
+Victoria,Oats,2018,test
+Victoria,Oats,2019,test
+Victoria,Oats,2020,test
+Victoria,Oats,2021,test
+Victoria,Wheat,2017,test
+Victoria,Wheat,2018,test
+Victoria,Wheat,2019,test
+Victoria,Wheat,2020,test
+Victoria,Wheat,2021,test
+Western Australia,Barley,2017,test
+Western Australia,Barley,2018,test
+Western Australia,Barley,2019,test
+Western Australia,Barley,2020,test
+Western Australia,Barley,2021,test
+Western Australia,Canola,2017,test
+Western Australia,Canola,2018,test
+Western Australia,Canola,2019,test
+Western Australia,Canola,2020,test
+Western Australia,Canola,2021,test
+Western Australia,Lupins,2017,test
+Western Australia,Lupins,2018,test
+Western Australia,Lupins,2019,test
+Western Australia,Lupins,2020,test
+Western Australia,Lupins,2021,test
+Western Australia,Oats,2017,test
+Western Australia,Oats,2018,test
+Western Australia,Oats,2019,test
+Western Australia,Oats,2020,test
+Western Australia,Oats,2021,test
+Western Australia,Wheat,2017,test
+Western Australia,Wheat,2018,test
+Western Australia,Wheat,2019,test
+Western Australia,Wheat,2020,test
+Western Australia,Wheat,2021,test
+New South Wales,Barley,1989,train
+New South Wales,Barley,1990,train
+New South Wales,Barley,1991,train
+New South Wales,Barley,1992,train
+New South Wales,Barley,1993,train
+New South Wales,Barley,1994,train
+New South Wales,Barley,1995,train
+New South Wales,Barley,1996,train
+New South Wales,Barley,1997,train
+New South Wales,Barley,1998,train
+New South Wales,Barley,1999,train
+New South Wales,Barley,2000,train
+New South Wales,Barley,2001,train
+New South Wales,Barley,2002,train
+New South Wales,Barley,2003,train
+New South Wales,Barley,2004,train
+New South Wales,Barley,2005,train
+New South Wales,Barley,2006,train
+New South Wales,Barley,2007,train
+New South Wales,Barley,2008,train
+New South Wales,Barley,2009,train
+New South Wales,Barley,2010,train
+New South Wales,Barley,2011,train
+New South Wales,Barley,2012,train
+New South Wales,Canola,1989,train
+New South Wales,Canola,1990,train
+New South Wales,Canola,1991,train
+New South Wales,Canola,1992,train
+New South Wales,Canola,1993,train
+New South Wales,Canola,1994,train
+New South Wales,Canola,1995,train
+New South Wales,Canola,1996,train
+New South Wales,Canola,1997,train
+New South Wales,Canola,1998,train
+New South Wales,Canola,1999,train
+New South Wales,Canola,2000,train
+New South Wales,Canola,2001,train
+New South Wales,Canola,2002,train
+New South Wales,Canola,2003,train
+New South Wales,Canola,2004,train
+New South Wales,Canola,2005,train
+New South Wales,Canola,2006,train
+New South Wales,Canola,2007,train
+New South Wales,Canola,2008,train
+New South Wales,Canola,2009,train
+New South Wales,Canola,2010,train
+New South Wales,Canola,2011,train
+New South Wales,Canola,2012,train
+New South Wales,Lupins,1989,train
+New South Wales,Lupins,1990,train
+New South Wales,Lupins,1991,train
+New South Wales,Lupins,1992,train
+New South Wales,Lupins,1993,train
+New South Wales,Lupins,1994,train
+New South Wales,Lupins,1995,train
+New South Wales,Lupins,1996,train
+New South Wales,Lupins,1997,train
+New South Wales,Lupins,1998,train
+New South Wales,Lupins,1999,train
+New South Wales,Lupins,2000,train
+New South Wales,Lupins,2001,train
+New South Wales,Lupins,2002,train
+New South Wales,Lupins,2003,train
+New South Wales,Lupins,2004,train
+New South Wales,Lupins,2005,train
+New South Wales,Lupins,2006,train
+New South Wales,Lupins,2007,train
+New South Wales,Lupins,2008,train
+New South Wales,Lupins,2009,train
+New South Wales,Lupins,2010,train
+New South Wales,Lupins,2011,train
+New South Wales,Lupins,2012,train
+New South Wales,Oats,1989,train
+New South Wales,Oats,1990,train
+New South Wales,Oats,1991,train
+New South Wales,Oats,1992,train
+New South Wales,Oats,1993,train
+New South Wales,Oats,1994,train
+New South Wales,Oats,1995,train
+New South Wales,Oats,1996,train
+New South Wales,Oats,1997,train
+New South Wales,Oats,1998,train
+New South Wales,Oats,1999,train
+New South Wales,Oats,2000,train
+New South Wales,Oats,2001,train
+New South Wales,Oats,2002,train
+New South Wales,Oats,2003,train
+New South Wales,Oats,2004,train
+New South Wales,Oats,2005,train
+New South Wales,Oats,2006,train
+New South Wales,Oats,2007,train
+New South Wales,Oats,2008,train
+New South Wales,Oats,2009,train
+New South Wales,Oats,2010,train
+New South Wales,Oats,2011,train
+New South Wales,Oats,2012,train
+New South Wales,Wheat,1989,train
+New South Wales,Wheat,1990,train
+New South Wales,Wheat,1991,train
+New South Wales,Wheat,1992,train
+New South Wales,Wheat,1993,train
+New South Wales,Wheat,1994,train
+New South Wales,Wheat,1995,train
+New South Wales,Wheat,1996,train
+New South Wales,Wheat,1997,train
+New South Wales,Wheat,1998,train
+New South Wales,Wheat,1999,train
+New South Wales,Wheat,2000,train
+New South Wales,Wheat,2001,train
+New South Wales,Wheat,2002,train
+New South Wales,Wheat,2003,train
+New South Wales,Wheat,2004,train
+New South Wales,Wheat,2005,train
+New South Wales,Wheat,2006,train
+New South Wales,Wheat,2007,train
+New South Wales,Wheat,2008,train
+New South Wales,Wheat,2009,train
+New South Wales,Wheat,2010,train
+New South Wales,Wheat,2011,train
+New South Wales,Wheat,2012,train
+Queensland,Barley,1989,train
+Queensland,Barley,1990,train
+Queensland,Barley,1991,train
+Queensland,Barley,1992,train
+Queensland,Barley,1993,train
+Queensland,Barley,1994,train
+Queensland,Barley,1995,train
+Queensland,Barley,1996,train
+Queensland,Barley,1997,train
+Queensland,Barley,1998,train
+Queensland,Barley,1999,train
+Queensland,Barley,2000,train
+Queensland,Barley,2001,train
+Queensland,Barley,2002,train
+Queensland,Barley,2003,train
+Queensland,Barley,2004,train
+Queensland,Barley,2005,train
+Queensland,Barley,2006,train
+Queensland,Barley,2007,train
+Queensland,Barley,2008,train
+Queensland,Barley,2009,train
+Queensland,Barley,2010,train
+Queensland,Barley,2011,train
+Queensland,Barley,2012,train
+Queensland,Canola,1989,train
+Queensland,Canola,1991,train
+Queensland,Canola,1992,train
+Queensland,Canola,1993,train
+Queensland,Canola,1994,train
+Queensland,Canola,1995,train
+Queensland,Canola,1996,train
+Queensland,Canola,1997,train
+Queensland,Canola,1998,train
+Queensland,Canola,2000,train
+Queensland,Canola,2001,train
+Queensland,Canola,2002,train
+Queensland,Canola,2004,train
+Queensland,Canola,2005,train
+Queensland,Canola,2006,train
+Queensland,Canola,2007,train
+Queensland,Canola,2008,train
+Queensland,Canola,2009,train
+Queensland,Canola,2010,train
+Queensland,Canola,2011,train
+Queensland,Canola,2012,train
+Queensland,Lupins,1989,train
+Queensland,Lupins,1991,train
+Queensland,Lupins,1992,train
+Queensland,Lupins,1993,train
+Queensland,Lupins,1994,train
+Queensland,Lupins,1995,train
+Queensland,Lupins,1996,train
+Queensland,Lupins,2000,train
+Queensland,Lupins,2003,train
+Queensland,Lupins,2004,train
+Queensland,Lupins,2005,train
+Queensland,Lupins,2006,train
+Queensland,Lupins,2007,train
+Queensland,Lupins,2008,train
+Queensland,Lupins,2009,train
+Queensland,Lupins,2010,train
+Queensland,Lupins,2011,train
+Queensland,Oats,1989,train
+Queensland,Oats,1990,train
+Queensland,Oats,1991,train
+Queensland,Oats,1992,train
+Queensland,Oats,1993,train
+Queensland,Oats,1994,train
+Queensland,Oats,1995,train
+Queensland,Oats,1996,train
+Queensland,Oats,1997,train
+Queensland,Oats,1998,train
+Queensland,Oats,1999,train
+Queensland,Oats,2000,train
+Queensland,Oats,2001,train
+Queensland,Oats,2002,train
+Queensland,Oats,2003,train
+Queensland,Oats,2004,train
+Queensland,Oats,2005,train
+Queensland,Oats,2006,train
+Queensland,Oats,2007,train
+Queensland,Oats,2008,train
+Queensland,Oats,2009,train
+Queensland,Oats,2010,train
+Queensland,Oats,2011,train
+Queensland,Oats,2012,train
+Queensland,Wheat,1989,train
+Queensland,Wheat,1990,train
+Queensland,Wheat,1991,train
+Queensland,Wheat,1992,train
+Queensland,Wheat,1993,train
+Queensland,Wheat,1994,train
+Queensland,Wheat,1995,train
+Queensland,Wheat,1996,train
+Queensland,Wheat,1997,train
+Queensland,Wheat,1998,train
+Queensland,Wheat,1999,train
+Queensland,Wheat,2000,train
+Queensland,Wheat,2001,train
+Queensland,Wheat,2002,train
+Queensland,Wheat,2003,train
+Queensland,Wheat,2004,train
+Queensland,Wheat,2005,train
+Queensland,Wheat,2006,train
+Queensland,Wheat,2007,train
+Queensland,Wheat,2008,train
+Queensland,Wheat,2009,train
+Queensland,Wheat,2010,train
+Queensland,Wheat,2011,train
+Queensland,Wheat,2012,train
+South Australia,Barley,1989,train
+South Australia,Barley,1990,train
+South Australia,Barley,1991,train
+South Australia,Barley,1992,train
+South Australia,Barley,1993,train
+South Australia,Barley,1994,train
+South Australia,Barley,1995,train
+South Australia,Barley,1996,train
+South Australia,Barley,1997,train
+South Australia,Barley,1998,train
+South Australia,Barley,1999,train
+South Australia,Barley,2000,train
+South Australia,Barley,2001,train
+South Australia,Barley,2002,train
+South Australia,Barley,2003,train
+South Australia,Barley,2004,train
+South Australia,Barley,2005,train
+South Australia,Barley,2006,train
+South Australia,Barley,2007,train
+South Australia,Barley,2008,train
+South Australia,Barley,2009,train
+South Australia,Barley,2010,train
+South Australia,Barley,2011,train
+South Australia,Barley,2012,train
+South Australia,Canola,1989,train
+South Australia,Canola,1990,train
+South Australia,Canola,1991,train
+South Australia,Canola,1992,train
+South Australia,Canola,1993,train
+South Australia,Canola,1994,train
+South Australia,Canola,1995,train
+South Australia,Canola,1996,train
+South Australia,Canola,1997,train
+South Australia,Canola,1998,train
+South Australia,Canola,1999,train
+South Australia,Canola,2000,train
+South Australia,Canola,2001,train
+South Australia,Canola,2002,train
+South Australia,Canola,2003,train
+South Australia,Canola,2004,train
+South Australia,Canola,2005,train
+South Australia,Canola,2006,train
+South Australia,Canola,2007,train
+South Australia,Canola,2008,train
+South Australia,Canola,2009,train
+South Australia,Canola,2010,train
+South Australia,Canola,2011,train
+South Australia,Canola,2012,train
+South Australia,Lupins,1989,train
+South Australia,Lupins,1990,train
+South Australia,Lupins,1991,train
+South Australia,Lupins,1992,train
+South Australia,Lupins,1993,train
+South Australia,Lupins,1994,train
+South Australia,Lupins,1995,train
+South Australia,Lupins,1996,train
+South Australia,Lupins,1997,train
+South Australia,Lupins,1998,train
+South Australia,Lupins,1999,train
+South Australia,Lupins,2000,train
+South Australia,Lupins,2001,train
+South Australia,Lupins,2002,train
+South Australia,Lupins,2003,train
+South Australia,Lupins,2004,train
+South Australia,Lupins,2005,train
+South Australia,Lupins,2006,train
+South Australia,Lupins,2007,train
+South Australia,Lupins,2008,train
+South Australia,Lupins,2009,train
+South Australia,Lupins,2010,train
+South Australia,Lupins,2011,train
+South Australia,Lupins,2012,train
+South Australia,Oats,1989,train
+South Australia,Oats,1990,train
+South Australia,Oats,1991,train
+South Australia,Oats,1992,train
+South Australia,Oats,1993,train
+South Australia,Oats,1994,train
+South Australia,Oats,1995,train
+South Australia,Oats,1996,train
+South Australia,Oats,1997,train
+South Australia,Oats,1998,train
+South Australia,Oats,1999,train
+South Australia,Oats,2000,train
+South Australia,Oats,2001,train
+South Australia,Oats,2002,train
+South Australia,Oats,2003,train
+South Australia,Oats,2004,train
+South Australia,Oats,2005,train
+South Australia,Oats,2006,train
+South Australia,Oats,2007,train
+South Australia,Oats,2008,train
+South Australia,Oats,2009,train
+South Australia,Oats,2010,train
+South Australia,Oats,2011,train
+South Australia,Oats,2012,train
+South Australia,Wheat,1989,train
+South Australia,Wheat,1990,train
+South Australia,Wheat,1991,train
+South Australia,Wheat,1992,train
+South Australia,Wheat,1993,train
+South Australia,Wheat,1994,train
+South Australia,Wheat,1995,train
+South Australia,Wheat,1996,train
+South Australia,Wheat,1997,train
+South Australia,Wheat,1998,train
+South Australia,Wheat,1999,train
+South Australia,Wheat,2000,train
+South Australia,Wheat,2001,train
+South Australia,Wheat,2002,train
+South Australia,Wheat,2003,train
+South Australia,Wheat,2004,train
+South Australia,Wheat,2005,train
+South Australia,Wheat,2006,train
+South Australia,Wheat,2007,train
+South Australia,Wheat,2008,train
+South Australia,Wheat,2009,train
+South Australia,Wheat,2010,train
+South Australia,Wheat,2011,train
+South Australia,Wheat,2012,train
+Tasmania,Barley,1989,train
+Tasmania,Barley,1990,train
+Tasmania,Barley,1991,train
+Tasmania,Barley,1992,train
+Tasmania,Barley,1993,train
+Tasmania,Barley,1994,train
+Tasmania,Barley,1995,train
+Tasmania,Barley,1996,train
+Tasmania,Barley,1997,train
+Tasmania,Barley,1998,train
+Tasmania,Barley,1999,train
+Tasmania,Barley,2000,train
+Tasmania,Barley,2001,train
+Tasmania,Barley,2002,train
+Tasmania,Barley,2003,train
+Tasmania,Barley,2004,train
+Tasmania,Barley,2005,train
+Tasmania,Barley,2006,train
+Tasmania,Barley,2007,train
+Tasmania,Barley,2008,train
+Tasmania,Barley,2009,train
+Tasmania,Barley,2010,train
+Tasmania,Barley,2011,train
+Tasmania,Barley,2012,train
+Tasmania,Canola,1989,train
+Tasmania,Canola,1990,train
+Tasmania,Canola,1991,train
+Tasmania,Canola,1992,train
+Tasmania,Canola,1993,train
+Tasmania,Canola,1994,train
+Tasmania,Canola,1995,train
+Tasmania,Canola,1996,train
+Tasmania,Canola,1997,train
+Tasmania,Canola,1998,train
+Tasmania,Canola,1999,train
+Tasmania,Canola,2000,train
+Tasmania,Canola,2001,train
+Tasmania,Canola,2002,train
+Tasmania,Canola,2003,train
+Tasmania,Canola,2004,train
+Tasmania,Canola,2005,train
+Tasmania,Canola,2006,train
+Tasmania,Canola,2007,train
+Tasmania,Canola,2008,train
+Tasmania,Canola,2009,train
+Tasmania,Canola,2010,train
+Tasmania,Canola,2011,train
+Tasmania,Canola,2012,train
+Tasmania,Lupins,1989,train
+Tasmania,Lupins,1990,train
+Tasmania,Lupins,1991,train
+Tasmania,Lupins,1992,train
+Tasmania,Lupins,1993,train
+Tasmania,Lupins,1994,train
+Tasmania,Lupins,1995,train
+Tasmania,Lupins,2002,train
+Tasmania,Lupins,2003,train
+Tasmania,Lupins,2004,train
+Tasmania,Lupins,2005,train
+Tasmania,Lupins,2006,train
+Tasmania,Lupins,2007,train
+Tasmania,Lupins,2010,train
+Tasmania,Lupins,2011,train
+Tasmania,Oats,1989,train
+Tasmania,Oats,1990,train
+Tasmania,Oats,1991,train
+Tasmania,Oats,1992,train
+Tasmania,Oats,1993,train
+Tasmania,Oats,1994,train
+Tasmania,Oats,1995,train
+Tasmania,Oats,1996,train
+Tasmania,Oats,1997,train
+Tasmania,Oats,1998,train
+Tasmania,Oats,1999,train
+Tasmania,Oats,2000,train
+Tasmania,Oats,2001,train
+Tasmania,Oats,2002,train
+Tasmania,Oats,2003,train
+Tasmania,Oats,2004,train
+Tasmania,Oats,2005,train
+Tasmania,Oats,2006,train
+Tasmania,Oats,2007,train
+Tasmania,Oats,2008,train
+Tasmania,Oats,2009,train
+Tasmania,Oats,2010,train
+Tasmania,Oats,2011,train
+Tasmania,Oats,2012,train
+Tasmania,Wheat,1989,train
+Tasmania,Wheat,1990,train
+Tasmania,Wheat,1991,train
+Tasmania,Wheat,1992,train
+Tasmania,Wheat,1993,train
+Tasmania,Wheat,1994,train
+Tasmania,Wheat,1995,train
+Tasmania,Wheat,1996,train
+Tasmania,Wheat,1997,train
+Tasmania,Wheat,1998,train
+Tasmania,Wheat,1999,train
+Tasmania,Wheat,2000,train
+Tasmania,Wheat,2001,train
+Tasmania,Wheat,2002,train
+Tasmania,Wheat,2003,train
+Tasmania,Wheat,2004,train
+Tasmania,Wheat,2005,train
+Tasmania,Wheat,2006,train
+Tasmania,Wheat,2007,train
+Tasmania,Wheat,2008,train
+Tasmania,Wheat,2009,train
+Tasmania,Wheat,2010,train
+Tasmania,Wheat,2011,train
+Tasmania,Wheat,2012,train
+Victoria,Barley,1989,train
+Victoria,Barley,1990,train
+Victoria,Barley,1991,train
+Victoria,Barley,1992,train
+Victoria,Barley,1993,train
+Victoria,Barley,1994,train
+Victoria,Barley,1995,train
+Victoria,Barley,1996,train
+Victoria,Barley,1997,train
+Victoria,Barley,1998,train
+Victoria,Barley,1999,train
+Victoria,Barley,2000,train
+Victoria,Barley,2001,train
+Victoria,Barley,2002,train
+Victoria,Barley,2003,train
+Victoria,Barley,2004,train
+Victoria,Barley,2005,train
+Victoria,Barley,2006,train
+Victoria,Barley,2007,train
+Victoria,Barley,2008,train
+Victoria,Barley,2009,train
+Victoria,Barley,2010,train
+Victoria,Barley,2011,train
+Victoria,Barley,2012,train
+Victoria,Canola,1989,train
+Victoria,Canola,1990,train
+Victoria,Canola,1991,train
+Victoria,Canola,1992,train
+Victoria,Canola,1993,train
+Victoria,Canola,1994,train
+Victoria,Canola,1995,train
+Victoria,Canola,1996,train
+Victoria,Canola,1997,train
+Victoria,Canola,1998,train
+Victoria,Canola,1999,train
+Victoria,Canola,2000,train
+Victoria,Canola,2001,train
+Victoria,Canola,2002,train
+Victoria,Canola,2003,train
+Victoria,Canola,2004,train
+Victoria,Canola,2005,train
+Victoria,Canola,2006,train
+Victoria,Canola,2007,train
+Victoria,Canola,2008,train
+Victoria,Canola,2009,train
+Victoria,Canola,2010,train
+Victoria,Canola,2011,train
+Victoria,Canola,2012,train
+Victoria,Lupins,1989,train
+Victoria,Lupins,1990,train
+Victoria,Lupins,1991,train
+Victoria,Lupins,1992,train
+Victoria,Lupins,1993,train
+Victoria,Lupins,1994,train
+Victoria,Lupins,1995,train
+Victoria,Lupins,1996,train
+Victoria,Lupins,1997,train
+Victoria,Lupins,1998,train
+Victoria,Lupins,1999,train
+Victoria,Lupins,2000,train
+Victoria,Lupins,2001,train
+Victoria,Lupins,2002,train
+Victoria,Lupins,2003,train
+Victoria,Lupins,2004,train
+Victoria,Lupins,2005,train
+Victoria,Lupins,2006,train
+Victoria,Lupins,2007,train
+Victoria,Lupins,2008,train
+Victoria,Lupins,2009,train
+Victoria,Lupins,2010,train
+Victoria,Lupins,2011,train
+Victoria,Lupins,2012,train
+Victoria,Oats,1989,train
+Victoria,Oats,1990,train
+Victoria,Oats,1991,train
+Victoria,Oats,1992,train
+Victoria,Oats,1993,train
+Victoria,Oats,1994,train
+Victoria,Oats,1995,train
+Victoria,Oats,1996,train
+Victoria,Oats,1997,train
+Victoria,Oats,1998,train
+Victoria,Oats,1999,train
+Victoria,Oats,2000,train
+Victoria,Oats,2001,train
+Victoria,Oats,2002,train
+Victoria,Oats,2003,train
+Victoria,Oats,2004,train
+Victoria,Oats,2005,train
+Victoria,Oats,2006,train
+Victoria,Oats,2007,train
+Victoria,Oats,2008,train
+Victoria,Oats,2009,train
+Victoria,Oats,2010,train
+Victoria,Oats,2011,train
+Victoria,Oats,2012,train
+Victoria,Wheat,1989,train
+Victoria,Wheat,1990,train
+Victoria,Wheat,1991,train
+Victoria,Wheat,1992,train
+Victoria,Wheat,1993,train
+Victoria,Wheat,1994,train
+Victoria,Wheat,1995,train
+Victoria,Wheat,1996,train
+Victoria,Wheat,1997,train
+Victoria,Wheat,1998,train
+Victoria,Wheat,1999,train
+Victoria,Wheat,2000,train
+Victoria,Wheat,2001,train
+Victoria,Wheat,2002,train
+Victoria,Wheat,2003,train
+Victoria,Wheat,2004,train
+Victoria,Wheat,2005,train
+Victoria,Wheat,2006,train
+Victoria,Wheat,2007,train
+Victoria,Wheat,2008,train
+Victoria,Wheat,2009,train
+Victoria,Wheat,2010,train
+Victoria,Wheat,2011,train
+Victoria,Wheat,2012,train
+Western Australia,Barley,1989,train
+Western Australia,Barley,1990,train
+Western Australia,Barley,1991,train
+Western Australia,Barley,1992,train
+Western Australia,Barley,1993,train
+Western Australia,Barley,1994,train
+Western Australia,Barley,1995,train
+Western Australia,Barley,1996,train
+Western Australia,Barley,1997,train
+Western Australia,Barley,1998,train
+Western Australia,Barley,1999,train
+Western Australia,Barley,2000,train
+Western Australia,Barley,2001,train
+Western Australia,Barley,2002,train
+Western Australia,Barley,2003,train
+Western Australia,Barley,2004,train
+Western Australia,Barley,2005,train
+Western Australia,Barley,2006,train
+Western Australia,Barley,2007,train
+Western Australia,Barley,2008,train
+Western Australia,Barley,2009,train
+Western Australia,Barley,2010,train
+Western Australia,Barley,2011,train
+Western Australia,Barley,2012,train
+Western Australia,Canola,1989,train
+Western Australia,Canola,1990,train
+Western Australia,Canola,1991,train
+Western Australia,Canola,1992,train
+Western Australia,Canola,1993,train
+Western Australia,Canola,1994,train
+Western Australia,Canola,1995,train
+Western Australia,Canola,1996,train
+Western Australia,Canola,1997,train
+Western Australia,Canola,1998,train
+Western Australia,Canola,1999,train
+Western Australia,Canola,2000,train
+Western Australia,Canola,2001,train
+Western Australia,Canola,2002,train
+Western Australia,Canola,2003,train
+Western Australia,Canola,2004,train
+Western Australia,Canola,2005,train
+Western Australia,Canola,2006,train
+Western Australia,Canola,2007,train
+Western Australia,Canola,2008,train
+Western Australia,Canola,2009,train
+Western Australia,Canola,2010,train
+Western Australia,Canola,2011,train
+Western Australia,Canola,2012,train
+Western Australia,Lupins,1989,train
+Western Australia,Lupins,1990,train
+Western Australia,Lupins,1991,train
+Western Australia,Lupins,1992,train
+Western Australia,Lupins,1993,train
+Western Australia,Lupins,1994,train
+Western Australia,Lupins,1995,train
+Western Australia,Lupins,1996,train
+Western Australia,Lupins,1997,train
+Western Australia,Lupins,1998,train
+Western Australia,Lupins,1999,train
+Western Australia,Lupins,2000,train
+Western Australia,Lupins,2001,train
+Western Australia,Lupins,2002,train
+Western Australia,Lupins,2003,train
+Western Australia,Lupins,2004,train
+Western Australia,Lupins,2005,train
+Western Australia,Lupins,2006,train
+Western Australia,Lupins,2007,train
+Western Australia,Lupins,2008,train
+Western Australia,Lupins,2009,train
+Western Australia,Lupins,2010,train
+Western Australia,Lupins,2011,train
+Western Australia,Lupins,2012,train
+Western Australia,Oats,1989,train
+Western Australia,Oats,1990,train
+Western Australia,Oats,1991,train
+Western Australia,Oats,1992,train
+Western Australia,Oats,1993,train
+Western Australia,Oats,1994,train
+Western Australia,Oats,1995,train
+Western Australia,Oats,1996,train
+Western Australia,Oats,1997,train
+Western Australia,Oats,1998,train
+Western Australia,Oats,1999,train
+Western Australia,Oats,2000,train
+Western Australia,Oats,2001,train
+Western Australia,Oats,2002,train
+Western Australia,Oats,2003,train
+Western Australia,Oats,2004,train
+Western Australia,Oats,2005,train
+Western Australia,Oats,2006,train
+Western Australia,Oats,2007,train
+Western Australia,Oats,2008,train
+Western Australia,Oats,2009,train
+Western Australia,Oats,2010,train
+Western Australia,Oats,2011,train
+Western Australia,Oats,2012,train
+Western Australia,Wheat,1989,train
+Western Australia,Wheat,1990,train
+Western Australia,Wheat,1991,train
+Western Australia,Wheat,1992,train
+Western Australia,Wheat,1993,train
+Western Australia,Wheat,1994,train
+Western Australia,Wheat,1995,train
+Western Australia,Wheat,1996,train
+Western Australia,Wheat,1997,train
+Western Australia,Wheat,1998,train
+Western Australia,Wheat,1999,train
+Western Australia,Wheat,2000,train
+Western Australia,Wheat,2001,train
+Western Australia,Wheat,2002,train
+Western Australia,Wheat,2003,train
+Western Australia,Wheat,2004,train
+Western Australia,Wheat,2005,train
+Western Australia,Wheat,2006,train
+Western Australia,Wheat,2007,train
+Western Australia,Wheat,2008,train
+Western Australia,Wheat,2009,train
+Western Australia,Wheat,2010,train
+Western Australia,Wheat,2011,train
+Western Australia,Wheat,2012,train
+New South Wales,Barley,2013,validation
+New South Wales,Barley,2014,validation
+New South Wales,Barley,2015,validation
+New South Wales,Barley,2016,validation
+New South Wales,Canola,2013,validation
+New South Wales,Canola,2014,validation
+New South Wales,Canola,2015,validation
+New South Wales,Canola,2016,validation
+New South Wales,Lupins,2013,validation
+New South Wales,Lupins,2014,validation
+New South Wales,Lupins,2015,validation
+New South Wales,Lupins,2016,validation
+New South Wales,Oats,2013,validation
+New South Wales,Oats,2014,validation
+New South Wales,Oats,2015,validation
+New South Wales,Oats,2016,validation
+New South Wales,Wheat,2013,validation
+New South Wales,Wheat,2014,validation
+New South Wales,Wheat,2015,validation
+New South Wales,Wheat,2016,validation
+Queensland,Barley,2013,validation
+Queensland,Barley,2014,validation
+Queensland,Barley,2015,validation
+Queensland,Barley,2016,validation
+Queensland,Canola,2013,validation
+Queensland,Canola,2014,validation
+Queensland,Canola,2015,validation
+Queensland,Canola,2016,validation
+Queensland,Lupins,2015,validation
+Queensland,Lupins,2016,validation
+Queensland,Oats,2013,validation
+Queensland,Oats,2014,validation
+Queensland,Oats,2015,validation
+Queensland,Oats,2016,validation
+Queensland,Wheat,2013,validation
+Queensland,Wheat,2014,validation
+Queensland,Wheat,2015,validation
+Queensland,Wheat,2016,validation
+South Australia,Barley,2013,validation
+South Australia,Barley,2014,validation
+South Australia,Barley,2015,validation
+South Australia,Barley,2016,validation
+South Australia,Canola,2013,validation
+South Australia,Canola,2014,validation
+South Australia,Canola,2015,validation
+South Australia,Canola,2016,validation
+South Australia,Lupins,2013,validation
+South Australia,Lupins,2014,validation
+South Australia,Lupins,2015,validation
+South Australia,Lupins,2016,validation
+South Australia,Oats,2013,validation
+South Australia,Oats,2014,validation
+South Australia,Oats,2015,validation
+South Australia,Oats,2016,validation
+South Australia,Wheat,2013,validation
+South Australia,Wheat,2014,validation
+South Australia,Wheat,2015,validation
+South Australia,Wheat,2016,validation
+Tasmania,Barley,2013,validation
+Tasmania,Barley,2014,validation
+Tasmania,Barley,2015,validation
+Tasmania,Barley,2016,validation
+Tasmania,Canola,2013,validation
+Tasmania,Canola,2014,validation
+Tasmania,Canola,2015,validation
+Tasmania,Canola,2016,validation
+Tasmania,Lupins,2015,validation
+Tasmania,Lupins,2016,validation
+Tasmania,Oats,2013,validation
+Tasmania,Oats,2014,validation
+Tasmania,Oats,2015,validation
+Tasmania,Oats,2016,validation
+Tasmania,Wheat,2013,validation
+Tasmania,Wheat,2014,validation
+Tasmania,Wheat,2015,validation
+Tasmania,Wheat,2016,validation
+Victoria,Barley,2013,validation
+Victoria,Barley,2014,validation
+Victoria,Barley,2015,validation
+Victoria,Barley,2016,validation
+Victoria,Canola,2013,validation
+Victoria,Canola,2014,validation
+Victoria,Canola,2015,validation
+Victoria,Canola,2016,validation
+Victoria,Lupins,2013,validation
+Victoria,Lupins,2014,validation
+Victoria,Lupins,2015,validation
+Victoria,Lupins,2016,validation
+Victoria,Oats,2013,validation
+Victoria,Oats,2014,validation
+Victoria,Oats,2015,validation
+Victoria,Oats,2016,validation
+Victoria,Wheat,2013,validation
+Victoria,Wheat,2014,validation
+Victoria,Wheat,2015,validation
+Victoria,Wheat,2016,validation
+Western Australia,Barley,2013,validation
+Western Australia,Barley,2014,validation
+Western Australia,Barley,2015,validation
+Western Australia,Barley,2016,validation
+Western Australia,Canola,2013,validation
+Western Australia,Canola,2014,validation
+Western Australia,Canola,2015,validation
+Western Australia,Canola,2016,validation
+Western Australia,Lupins,2013,validation
+Western Australia,Lupins,2014,validation
+Western Australia,Lupins,2015,validation
+Western Australia,Lupins,2016,validation
+Western Australia,Oats,2013,validation
+Western Australia,Oats,2014,validation
+Western Australia,Oats,2015,validation
+Western Australia,Oats,2016,validation
+Western Australia,Wheat,2013,validation
+Western Australia,Wheat,2014,validation
+Western Australia,Wheat,2015,validation
+Western Australia,Wheat,2016,validation

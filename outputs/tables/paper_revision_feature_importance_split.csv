@@ -6,10 +6,10 @@ Operational with yield history,compound_stress,0.0683414176506349,0.068341417650
 Operational with yield history,energy_dryness,0.0677983398602456,0.0677983398602456,1,Operational with yield history
 Operational with yield history,weather_dev,0.04288825913226354,0.0702039904205724,3,Operational with yield history
 Operational with yield history,categorical_time,0.0351230711080408,0.0351230711080408,1,Operational with yield history
-History-free weather-soil,categorical_time,0.19236769175452753,0.2132192880354598,3,History-free weather-soil
-History-free weather-soil,soil,0.18898051666187787,0.2468306419280232,3,History-free weather-soil
-History-free weather-soil,heat_cold,0.16266091964920026,0.1729779251111642,2,History-free weather-soil
-History-free weather-soil,rainfall,0.08939137534379012,0.1245050592421306,3,History-free weather-soil
-History-free weather-soil,energy_dryness,0.021007619033491,0.021007619033491,1,History-free weather-soil
-History-free weather-soil,compound_stress,0.0166775373571244,0.0327296464191658,2,History-free weather-soil
-History-free weather-soil,weather_dev,0.0011866778806157,0.0011866778806157,1,History-free weather-soil
+No-yield-history weather-soil,categorical_time,0.19236769175452753,0.2132192880354598,3,No-yield-history weather-soil
+No-yield-history weather-soil,soil,0.18898051666187787,0.2468306419280232,3,No-yield-history weather-soil
+No-yield-history weather-soil,heat_cold,0.16266091964920026,0.1729779251111642,2,No-yield-history weather-soil
+No-yield-history weather-soil,rainfall,0.08939137534379012,0.1245050592421306,3,No-yield-history weather-soil
+No-yield-history weather-soil,energy_dryness,0.021007619033491,0.021007619033491,1,No-yield-history weather-soil
+No-yield-history weather-soil,compound_stress,0.0166775373571244,0.0327296464191658,2,No-yield-history weather-soil
+No-yield-history weather-soil,weather_dev,0.0011866778806157,0.0011866778806157,1,No-yield-history weather-soil

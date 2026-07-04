@@ -1,0 +1,9 @@
+Group,Regime,Model,Uses daily sequence?,Uses yield history?,May-Oct RMSE,May-Oct R2
+Historical,Past-only yield history,3-year rolling mean,No,Yes,0.7787277884848315,0.6215167400633967
+Classical ML,No-yield-history weather-soil,SVR-RBF,No,No,0.8212375066026472,0.5790670896291725
+Strong tabular ML,No-yield-history weather-soil,XGBoost,No,No,0.8879149052547473,0.5079400438710877
+Interpretable ML,No-yield-history weather-soil,GAM,No,No,1.045080300934413,0.3183292581593182
+Sequence,Daily sequence no-yield,DailyWeather-GRU,Yes,No,1.020361960177626,0.3501938581466675
+Sequence,Daily sequence + yield history,DailyWeather-GRU,Yes,Yes,0.7184001236892118,0.6778870820999146
+Strong tabular ML,Operational with yield history,CatBoost,No,Yes,0.7783840632805133,0.6218507862510787
+Classical ML,Operational with yield history,Ridge,No,Yes,0.6603784081843912,0.7278169597525497

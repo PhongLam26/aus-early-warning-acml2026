@@ -1,13 +1,13 @@
-\begin{tabular}{lrrrr}
+\begin{tabular}{lllll}
 \toprule
-Feature set & May-Jun RMSE & May-Jun R2 & May-Oct RMSE & May-Oct R2 \\
+Feature set & Weather & Soil & Yield hist. & Interpretation \\
 \midrule
-Identity+Time & 0.856 & 0.543 & 0.856 & 0.543 \\
-Weather & 0.920 & 0.472 & 0.875 & 0.522 \\
-Weather+Dev & 0.931 & 0.459 & 0.889 & 0.507 \\
-Weather+Soil & 0.913 & 0.480 & 0.865 & 0.533 \\
-Weather+Dev+Soil & 0.921 & 0.470 & 0.889 & 0.507 \\
-Yield History & 0.800 & 0.600 & 0.800 & 0.600 \\
-Operational & 0.721 & 0.676 & 0.658 & 0.730 \\
+Identity/time only & No & No & No & Crop-region persistence benchmark \\
+Weather & Yes & No & No & Stage-weather signal only \\
+Weather+Dev & Yes & No & No & Adds train-derived anomaly features \\
+Weather+Soil & Yes & Yes & No & Adds static regional vulnerability \\
+No-yield-history weather-soil & Yes & Yes & No & Main information-isolation regime \\
+Yield history & No & No & Yes & Persistent productivity memory \\
+Operational with yield history & Yes & Yes & Yes & Main deployment-oriented regime \\
 \bottomrule
 \end{tabular}

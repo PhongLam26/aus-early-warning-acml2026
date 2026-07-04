@@ -11,6 +11,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
 
 from sklearn.base import clone
 from sklearn.compose import ColumnTransformer
@@ -37,6 +38,21 @@ from common import configured_path, ensure_output_dirs, load_config, markdown_ta
 
 ROUND2_DIR_NAME = "improvement_round2_ablation_validation_2026_06_24"
 ROUND2_IMPORTANCE_WINDOWS = ["May-Jun", "May-Sep", "May-Oct"]
+FEATURE_LABELS = {
+    "identity_time_only": "Identity+Time",
+    "weather_stage_only": "Weather",
+    "weather_plus_anomaly": "Weather+Dev",
+    "weather_plus_soil": "Weather+Soil",
+    "weather_anomaly_soil_no_lag": "No-yield-history weather-soil",
+    "lag_yield_only": "Yield history",
+    "full_operational": "Operational with yield history",
+}
+PROTOCOL_LABELS = {
+    "time_split": "Held-out test years",
+    "rolling_origin": "Rolling-origin",
+    "leave_one_region_out": "Leave-one-region-out",
+    "leave_one_crop_out": "Leave-one-crop-out",
+}
 TARGET_COLUMNS = {
     "yield_t_ha",
     "expected_yield_t_ha",
@@ -495,6 +511,29 @@ def best_metric_table(metrics: pd.DataFrame, top_per_window: int | None = 5) -> 
     return pivot.groupby("forecast_window").head(top_per_window)
 
 
+def stress_best_summary_table(stress: pd.DataFrame, feature_sets: list[str] | None = None) -> pd.DataFrame:
+    if feature_sets is None:
+        feature_sets = ["weather_anomaly_soil_no_lag", "full_operational"]
+    stress_reg = stress[(stress["task"] == "regression") & (stress["metric"].isin(["RMSE", "R2"]))]
+    validation = stress_reg.pivot_table(
+        index=["protocol", "fold", "forecast_window", "feature_set", "model"],
+        columns="metric",
+        values="value",
+        aggfunc="mean",
+    ).reset_index()
+    validation_summary = (
+        validation.groupby(["protocol", "feature_set", "model"], as_index=False)
+        .agg(mean_RMSE=("RMSE", "mean"), mean_R2=("R2", "mean"), folds=("fold", "nunique"))
+    )
+    return (
+        validation_summary[validation_summary["feature_set"].isin(feature_sets)]
+        .sort_values(["protocol", "feature_set", "mean_RMSE"])
+        .groupby(["protocol", "feature_set"], as_index=False, sort=False)
+        .head(1)
+        .copy()
+    )
+
+
 def make_paper_tables(ablation: pd.DataFrame, stress: pd.DataFrame, importance: pd.DataFrame, config: dict[str, Any]) -> dict[str, pd.DataFrame]:
     reg = ablation[(ablation["task"] == "regression") & (ablation["metric"].isin(["MAE", "RMSE", "R2"]))]
     reg_p = reg.pivot_table(
@@ -529,6 +568,7 @@ def make_paper_tables(ablation: pd.DataFrame, stress: pd.DataFrame, importance: 
         .agg(mean_RMSE=("RMSE", "mean"), mean_R2=("R2", "mean"), folds=("fold", "nunique"))
         .sort_values(["protocol", "mean_RMSE"])
     )
+    stress_best_summary = stress_best_summary_table(stress)
     importance_table = (
         importance.sort_values("rmse_delta_mean", ascending=False)
         .groupby(["forecast_window", "feature_set"])
@@ -539,6 +579,7 @@ def make_paper_tables(ablation: pd.DataFrame, stress: pd.DataFrame, importance: 
         "round2_paper_table_lead_time": lead_time,
         "round2_paper_table_ablation": ablation_table,
         "round2_paper_table_validation": validation_summary,
+        "round2_paper_table_stress_best_summary": stress_best_summary,
         "round2_feature_group_importance": importance_table,
     }
 
@@ -560,7 +601,7 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
 
     fig, ax = plt.subplots(figsize=(10.5, 5.8))
     for feature_set, group in best.sort_values("window_order").groupby("feature_set"):
-        ax.plot(group["forecast_window"], group["RMSE"], marker="o", label=feature_set)
+        ax.plot(group["forecast_window"], group["RMSE"], marker="o", label=FEATURE_LABELS.get(feature_set, feature_set))
     ax.set_title("Round 2 Ablation RMSE By Lead Time")
     ax.set_xlabel("Forecast window")
     ax.set_ylabel("Best RMSE")
@@ -571,23 +612,46 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
     full = best[best["feature_set"] == "full_operational"][["forecast_window", "R2"]].rename(columns={"R2": "full_R2"})
     delta = best.merge(full, on="forecast_window", how="left")
     delta["r2_delta_vs_full"] = delta["R2"] - delta["full_R2"]
-    fig, ax = plt.subplots(figsize=(10.5, 5.6))
-    pivot = delta.pivot(index="forecast_window", columns="feature_set", values="r2_delta_vs_full").reindex(sorted(order, key=order.get))
-    pivot.plot(kind="bar", ax=ax)
-    ax.set_title("R2 Delta Versus Full Operational Model")
-    ax.set_xlabel("Forecast window")
-    ax.set_ylabel("R2 delta")
-    ax.grid(axis="y", alpha=0.25)
-    ax.legend(fontsize=8, ncol=2)
+    delta["feature_label"] = delta["feature_set"].map(FEATURE_LABELS)
+    pivot = delta.pivot(index="forecast_window", columns="feature_label", values="r2_delta_vs_full").reindex(sorted(order, key=order.get))
+    column_order = [
+        "Identity+Time",
+        "No-yield-history weather-soil",
+        "Operational with yield history",
+        "Weather",
+        "Weather+Dev",
+        "Weather+Soil",
+        "Yield history",
+    ]
+    pivot = pivot[[column for column in column_order if column in pivot.columns]]
+    fig, ax = plt.subplots(figsize=(12.8, 5.6))
+    norm = TwoSlopeNorm(vmin=float(np.nanmin(pivot.values)), vcenter=0.0, vmax=max(0.001, float(np.nanmax(pivot.values))))
+    im = ax.imshow(pivot.values, cmap="RdBu", norm=norm, aspect="auto")
+    ax.set_xticks(np.arange(len(pivot.columns)))
+    ax.set_yticks(np.arange(len(pivot.index)))
+    ax.set_xticklabels(pivot.columns, rotation=25, ha="right", fontsize=11)
+    ax.set_yticklabels(pivot.index, fontsize=12)
+    for i in range(pivot.shape[0]):
+        for j in range(pivot.shape[1]):
+            value = pivot.iloc[i, j]
+            if pd.notna(value):
+                ax.text(j, i, f"{value:.2f}", ha="center", va="center", fontsize=10.5, color="#1f1f1f")
+    cbar = fig.colorbar(im, ax=ax, fraction=0.035, pad=0.02)
+    cbar.set_label("R2 delta", fontsize=11)
+    cbar.ax.tick_params(labelsize=10)
+    ax.set_title("R2 Delta Versus Full Operational Model", fontsize=15)
+    ax.set_xlabel("Feature regime", fontsize=12)
+    ax.set_ylabel("Forecast window", fontsize=12)
+    ax.set_xticks(np.arange(-0.5, len(pivot.columns), 1), minor=True)
+    ax.set_yticks(np.arange(-0.5, len(pivot.index), 1), minor=True)
+    ax.grid(which="minor", color="white", linewidth=1.3)
+    ax.tick_params(which="minor", bottom=False, left=False)
     save_fig(fig, fig_dir / "fig13_ablation_r2_delta_by_feature_set.png")
 
-    stress_reg = stress[(stress["task"] == "regression") & (stress["metric"] == "RMSE")]
-    stress_summary = (
-        stress_reg[stress_reg["feature_set"].isin(["weather_anomaly_soil_no_lag", "full_operational"])]
-        .groupby(["protocol", "feature_set"], as_index=False)["value"]
-        .mean()
-    )
-    matrix = stress_summary.pivot(index="protocol", columns="feature_set", values="value")
+    stress_summary = stress_best_summary_table(stress)
+    stress_summary["protocol_label"] = stress_summary["protocol"].map(PROTOCOL_LABELS)
+    stress_summary["feature_label"] = stress_summary["feature_set"].map(FEATURE_LABELS)
+    matrix = stress_summary.pivot(index="protocol_label", columns="feature_label", values="mean_RMSE")
     fig, ax = plt.subplots(figsize=(7.8, 4.8))
     im = ax.imshow(matrix.values, cmap="YlOrRd")
     ax.set_xticks(np.arange(len(matrix.columns)))
@@ -604,7 +668,13 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
     imp = importance.copy()
     imp = imp[imp["rmse_delta_mean"] > 0].sort_values("rmse_delta_mean", ascending=False).head(18)
     fig, ax = plt.subplots(figsize=(10, 6))
-    labels = imp["forecast_window"] + " | " + imp["feature_set"] + " | " + imp["feature_group"]
+    labels = (
+        imp["forecast_window"]
+        + " | "
+        + imp["feature_set"].map(FEATURE_LABELS)
+        + " | "
+        + imp["feature_group"].replace({"weather_anomaly": "weather_dev"})
+    )
     ax.barh(labels[::-1], imp["rmse_delta_mean"].iloc[::-1], color="#2f6f73")
     ax.set_xlabel("RMSE increase after permutation")
     ax.set_title("Feature Group Importance")
@@ -614,11 +684,11 @@ def plot_round2_figures(ablation: pd.DataFrame, stress: pd.DataFrame, importance
     ps = best[best["feature_set"] == "weather_anomaly_soil_no_lag"].sort_values("window_order")
     op = best[best["feature_set"] == "full_operational"].sort_values("window_order")
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.8))
-    axes[0].plot(ps["forecast_window"], ps["RMSE"], marker="o", label="Paper-safe")
-    axes[0].plot(op["forecast_window"], op["RMSE"], marker="o", label="Operational")
+    axes[0].plot(ps["forecast_window"], ps["RMSE"], marker="o", label="No-yield-history weather-soil")
+    axes[0].plot(op["forecast_window"], op["RMSE"], marker="o", label="Operational with yield history")
     axes[0].set_title("RMSE")
-    axes[1].plot(ps["forecast_window"], ps["R2"], marker="o", label="Paper-safe")
-    axes[1].plot(op["forecast_window"], op["R2"], marker="o", label="Operational")
+    axes[1].plot(ps["forecast_window"], ps["R2"], marker="o", label="No-yield-history weather-soil")
+    axes[1].plot(op["forecast_window"], op["R2"], marker="o", label="Operational with yield history")
     axes[1].set_title("R2")
     for ax in axes:
         ax.set_xlabel("Forecast window")

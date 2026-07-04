@@ -18,7 +18,7 @@ Generated support artifacts for the ACML Australia early-warning manuscript revi
 - Naive historical baselines use train-only means/trends or past-only chronological yield values.
 - Confusion matrix and watch-list use May-Oct validation-selected classification threshold only.
 - Uncertainty summary prioritizes conformal intervals and keeps coverage/width as diagnostics.
-- Feature-importance figure separates operational lag-history importance from history-free weather-soil importance.
+- Feature-importance figure separates operational lag-history importance from no-yield-history weather-soil importance.
 
 ## Preview: May-Oct Watch List
 

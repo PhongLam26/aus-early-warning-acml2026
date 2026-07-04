@@ -5,7 +5,7 @@
 - `paper_dir`: D:\00_Major\K4\DAP\AUS_project\paper_acml
 - `source_zip`: D:\00_Major\K4\DAP\AUS_project\outputs\reports\acml2026_aus_early_warning_anonymous_source.zip
 - `safe_round2_snapshot`: D:\00_Major\K4\DAP\AUS_project\outputs\safe_versions\round2_safe_2026_06_24
-- `figures_copied`: 5
+- `figures_copied`: 6
 - `anonymous_author_block`: yes
 - `main_claim_source`: round2_safe_2026_06_24
 
@@ -16,10 +16,11 @@
 - `fig13_ablation_r2_delta_by_feature_set.png` -> `paper_acml/figures/fig13_ablation_r2_delta_by_feature_set.png`
 - `fig14_stress_validation_heatmap.png` -> `paper_acml/figures/fig14_stress_validation_heatmap.png`
 - `fig19_feature_importance_split.png` -> `paper_acml/figures/fig19_feature_importance_split.png`
+- `fig20_baseline_comparison_rmse_r2.png` -> `paper_acml/figures/fig20_baseline_comparison_rmse_r2.png`
 
 ## Anonymization Defaults
 
 - `main.tex` uses an empty `\author{}` block.
 - The manuscript text avoids local absolute paths, author names, affiliations, and acknowledgements.
-- The paper separates history-free weather-soil evidence from operational forecasts that use lag-yield history.
+- The paper separates no-yield-history weather-soil evidence from operational forecasts that use lag-yield history.
 - `acml26.bib` is regenerated from `Tong_hop_ref_bai_Uc_Early_Warning.docx`.
