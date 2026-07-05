@@ -77,13 +77,18 @@ def latex_escape(value: object) -> str:
     return text
 
 
+def latex_header(value: object) -> str:
+    text = latex_escape(value)
+    return text.replace(r"\$R\textasciicircum{}2\$", r"\Rsq{}")
+
+
 def fmt(value: float, digits: int = 3) -> str:
     return f"{float(value):.{digits}f}"
 
 
 def write_tabular(path: Path, colspec: str, headers: list[str], rows: list[list[object]]) -> None:
     lines = [f"\\begin{{tabular}}{{{colspec}}}", r"\toprule"]
-    lines.append(" & ".join(latex_escape(h) for h in headers) + r" \\")
+    lines.append(" & ".join(latex_header(h) for h in headers) + r" \\")
     lines.append(r"\midrule")
     for row in rows:
         lines.append(" & ".join(latex_escape(cell) for cell in row) + r" \\")
@@ -92,7 +97,7 @@ def write_tabular(path: Path, colspec: str, headers: list[str], rows: list[list[
 
 
 def write_longtable(path: Path, colspec: str, headers: list[str], rows: list[list[object]]) -> None:
-    header = " & ".join(latex_escape(h) for h in headers) + r" \\"
+    header = " & ".join(latex_header(h) for h in headers) + r" \\"
     lines = [
         r"\tiny",
         f"\\begin{{longtable}}{{{colspec}}}",
