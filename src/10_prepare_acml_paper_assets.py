@@ -189,7 +189,7 @@ def make_lead_time_table() -> None:
     write_tabular(
         TABLE_DIR / "table_lead_time.tex",
         "@{}lllrrr@{}",
-        ["Window", "Feature set", "Model", "MAE", "RMSE", "R2"],
+        ["Window", "Feature set", "Model", "MAE", "RMSE", r"$R^2$"],
         rows,
     )
 
@@ -219,7 +219,7 @@ def make_baseline_lead_time_figure() -> None:
         axes[0].plot(group["forecast_window"], group["RMSE"], marker="o", label=label)
         axes[1].plot(group["forecast_window"], group["R2"], marker="o", label=label)
     axes[0].set_title("RMSE")
-    axes[1].set_title("R2")
+    axes[1].set_title("$R^2$")
     for ax in axes:
         ax.set_xlabel("Forecast window")
         ax.grid(alpha=0.25)
@@ -379,7 +379,7 @@ def make_validation_table() -> None:
     write_tabular(
         TABLE_DIR / "table_validation.tex",
         "lllrrr",
-        ["Protocol", "Feature set", "Model", "Mean RMSE", "Mean R2", "Folds"],
+        ["Protocol", "Feature set", "Model", "Mean RMSE", r"Mean $R^2$", "Folds"],
         rows,
     )
 
@@ -448,7 +448,7 @@ def make_round3_table() -> None:
     write_tabular(
         TABLE_DIR / "table_round3_residual.tex",
         "lllrrrr",
-        ["Experiment", "Window", "Model", "Alpha", "MAE", "RMSE", "R2"],
+        ["Experiment", "Window", "Model", "Alpha", "MAE", "RMSE", r"$R^2$"],
         rows,
     )
 
@@ -510,7 +510,7 @@ def make_sota_baseline_table() -> None:
     write_tabular(
         TABLE_DIR / "table_naive_baselines.tex",
         "lllllrr",
-        ["Group", "Regime", "Model", "Daily seq.", "Yield history", "May-Oct RMSE", "May-Oct R2"],
+        ["Group", "Regime", "Model", "Daily seq.", "Yield history", "May-Oct RMSE", r"May-Oct $R^2$"],
         rows,
     )
     appendix = ok.copy()
@@ -557,7 +557,7 @@ def make_sota_baseline_table() -> None:
     write_longtable(
         TABLE_DIR / "table_baselines_full_appendix.tex",
         r"@{}p{0.12\textwidth}p{0.20\textwidth}p{0.08\textwidth}p{0.16\textwidth}rrr@{}",
-        ["Group", "Regime", "Window", "Model", "MAE", "RMSE", "R2"],
+        ["Group", "Regime", "Window", "Model", "MAE", "RMSE", r"$R^2$"],
         appendix_rows,
     )
 
@@ -775,12 +775,67 @@ def write_bibliography() -> None:
 }""",
         "grundy2015slga": r"""@article{grundy2015slga,
   title = {Soil and Landscape Grid of Australia},
-  author = {Grundy, Michael J. and Rossel, Raphael A. Viscarra and Searle, Ross D. and Wilson, Peter L. and Chen, Chen and Gregory, Luke J.},
+  author = {Grundy, M. J. and Viscarra Rossel, R. A. and Searle, R. D. and Wilson, P. L. and Chen, C. and Gregory, L. J.},
   journal = {Soil Research},
   volume = {53},
   number = {8},
   pages = {835--844},
-  year = {2015}
+  year = {2015},
+  doi = {10.1071/SR15191}
+}""",
+        "basso2019seasonalForecast": r"""@incollection{basso2019seasonalForecast,
+  author    = {Basso, Bruno and Liu, Lin},
+  title     = {Seasonal crop yield forecast: Methods, applications, and accuracies},
+  booktitle = {Advances in Agronomy},
+  volume    = {154},
+  pages     = {201--255},
+  publisher = {Elsevier},
+  year      = {2019},
+  doi       = {10.1016/bs.agron.2018.11.002}
+}""",
+        "rembold2019asap": r"""@article{rembold2019asap,
+  author  = {Rembold, Felix and Meroni, Michele and Urbano, Fernando and Csak, Gergo and Kerdiles, Herve and Perez-Hoyos, Ana and Lemoine, Guido and Leo, Ovidio and Negre, Thierry},
+  title   = {ASAP: A new global early warning system to detect anomaly hot spots of agricultural production for food security analysis},
+  journal = {Agricultural Systems},
+  volume  = {168},
+  pages   = {247--257},
+  year    = {2019},
+  doi     = {10.1016/j.agsy.2018.07.002}
+}""",
+        "you2017deepGaussian": r"""@inproceedings{you2017deepGaussian,
+  author    = {You, Jiaxuan and Li, Xiaocheng and Low, Melvin and Lobell, David and Ermon, Stefano},
+  title     = {Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {31},
+  year      = {2017},
+  doi       = {10.1609/aaai.v31i1.11172}
+}""",
+        "khaki2019dnn": r"""@article{khaki2019dnn,
+  author  = {Khaki, Saeed and Wang, Lizhi},
+  title   = {Crop Yield Prediction Using Deep Neural Networks},
+  journal = {Frontiers in Plant Science},
+  volume  = {10},
+  pages   = {621},
+  year    = {2019},
+  doi     = {10.3389/fpls.2019.00621}
+}""",
+        "khaki2020cnnRnn": r"""@article{khaki2020cnnRnn,
+  author  = {Khaki, Saeed and Wang, Lizhi and Archontoulis, Sotirios V.},
+  title   = {A CNN-RNN Framework for Crop Yield Prediction},
+  journal = {Frontiers in Plant Science},
+  volume  = {10},
+  pages   = {1750},
+  year    = {2020},
+  doi     = {10.3389/fpls.2019.01750}
+}""",
+        "schauberger2017temperature": r"""@article{schauberger2017temperature,
+  author  = {Schauberger, Bernhard and Archontoulis, Sotirios and Arneth, Almut and Balkovic, Juraj and Ciais, Philippe and Deryng, Delphine and Elliott, Joshua and Folberth, Christian and Khabarov, Nikolay and Muller, Christoph and Pugh, Thomas A. M. and Rolinski, Susanne and Schaphoff, Sibyll and Schmid, Erwin and Wang, Xuhui and Schlenker, Wolfram and Frieler, Katja},
+  title   = {Consistent negative response of US crops to high temperatures in observations and crop models},
+  journal = {Nature Communications},
+  volume  = {8},
+  pages   = {13931},
+  year    = {2017},
+  doi     = {10.1038/ncomms13931}
 }""",
     }
     for key, entry in manual_entries.items():
@@ -801,6 +856,7 @@ def _write_main_tex_legacy() -> None:
 \usepackage{array}
 \usepackage{float}
 \usepackage{lineno}
+\usepackage{textcomp}
 
 \pagenumbering{gobble}
 \raggedbottom
@@ -824,6 +880,7 @@ def _write_main_tex_legacy() -> None:
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
+\newcommand{\Rsq}{R\texttwosuperior}
 \makeatletter
 \let\Ginclude@graphics\@org@Ginclude@graphics
 \setlength{\@fptop}{0pt}
@@ -857,7 +914,7 @@ def _write_main_tex_legacy() -> None:
 \maketitle
 
 \begin{abstract}
-Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a no-yield-history weather-soil setting from an operational yield-history setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best no-yield-history May-Oct internal-suite model reaches RMSE 0.821 t/ha and R2 0.579, while the best operational May-Oct model reaches RMSE 0.660 t/ha and R2 0.728. Ablation and internal baseline-suite comparisons show that weather and soil provide measurable but secondary monitoring information; persistent crop-region structure and lagged yield history account for much of the strongest operational skill. Risk classification and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
+Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a no-yield-history weather-soil setting from an operational yield-history setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best no-yield-history May-Oct internal-suite model reaches RMSE 0.821 t/ha and $R^2$ 0.579, while the best operational May-Oct model reaches RMSE 0.660 t/ha and $R^2$ 0.728. Ablation and internal baseline-suite comparisons show that weather and soil provide measurable but secondary monitoring information; persistent crop-region structure and lagged yield history account for much of the strongest operational skill. Risk classification and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
 \end{abstract}
 
 \begin{keywords}
@@ -882,13 +939,13 @@ We organize the study around four research questions. RQ1 asks how much forecast
 
 \subsection{Crop Yield Forecasting and Early Warning}
 
-Machine learning is now common in regional crop-yield forecasting, where weather, soil, remote sensing, and management covariates appear across many systems \citep{vanKlompenburg2020systematicReview,paudel2021largeScaleYield}. Because yield panels are often small relative to environmental feature sets, regularized and tree-based tabular models remain strong grain-forecasting baselines \citep{meroni2021smallData}. Recent multi-modal and decision-support benchmarks broaden this landscape \citep{lin2024cropnet,declercq2024indiaRice}; our setting is narrower: state-level Australian winter crops with a fixed May-Oct monitoring calendar.
+Machine learning is now common in regional crop-yield forecasting, where weather, soil, remote sensing, and management covariates appear across many systems \citep{vanKlompenburg2020systematicReview,paudel2021largeScaleYield}. Remote-sensing and neural forecasting studies show how richer image or sequence inputs can improve crop-yield prediction when enough data are available \citep{you2017deepGaussian,khaki2019dnn,khaki2020cnnRnn}. Because yield panels are often small relative to environmental feature sets, regularized and tree-based tabular models remain strong grain-forecasting baselines \citep{meroni2021smallData}. Recent multi-modal and decision-support benchmarks broaden this landscape \citep{lin2024cropnet,declercq2024indiaRice}; our setting is narrower: state-level Australian winter crops with a fixed May-Oct monitoring calendar.
 
-Early-warning studies differ from generic yield prediction because lead time is part of the objective. A model that works only after most weather information is observed may have limited preparedness value, so preseason and early-season crop-failure forecasts evaluate when skill emerges as well as final accuracy \citep{anderson2024preseasonWarning}. We adopt this view by reporting skill separately for each forecast window.
+Early-warning studies differ from generic yield prediction because lead time is part of the objective. Seasonal forecasting reviews and operational early-warning systems emphasize that timing, update frequency, and interpretable warning categories matter alongside final accuracy \citep{basso2019seasonalForecast,rembold2019asap}. A model that works only after most weather information is observed may have limited preparedness value, so preseason and early-season crop-failure forecasts evaluate when skill emerges as well as final accuracy \citep{anderson2024preseasonWarning}. We adopt this view by reporting skill separately for each forecast window.
 
 \subsection{Stage-Aware Weather and Extreme-Event Features}
 
-Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence emphasizes compound hot-dry extremes, crop-specific vulnerability, heterogeneous regional responses, and sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{heino2023hotDryExtremes,sjulgard2023swedenAnomalies,heilemann2024lassoExtremes,kabtih2025hotPluvial}. This motivates stage-aware rather than full-season weather summaries.
+Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence emphasizes high-temperature damages, compound hot-dry extremes, crop-specific vulnerability, heterogeneous regional responses, and sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{schauberger2017temperature,heino2023hotDryExtremes,sjulgard2023swedenAnomalies,heilemann2024lassoExtremes,kabtih2025hotPluvial}. This motivates stage-aware rather than full-season weather summaries.
 
 \subsection{Interpretability, Uncertainty, and Decision Support}
 
@@ -946,7 +1003,7 @@ Classification models use validation-tuned thresholds for low-yield-risk decisio
 
 The main split trains on 1989--2012, tunes on 2013--2016, and tests on 2017--2021. The test period is not used for scalers, feature thresholds, residual calibration, conformal residuals, expected-yield baselines, weather-deviation baselines, or low-yield-risk thresholds. This temporal split reflects the intended forecasting direction: models learn from earlier seasons and are evaluated on later seasons.
 
-Regression metrics are MAE, RMSE, and R2. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width. The conformal intervals target nominal 80\% marginal coverage using validation-period calibration residuals only; test coverage is reported without retuning. Deviations from nominal coverage are interpreted as evidence of calibration difficulty under temporal shift and small calibration samples, not as a target corrected using test outcomes. The primary model-selection comparisons are always made within the same forecast window and split.
+Regression metrics are MAE, RMSE, and $R^2$. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width. The conformal intervals target nominal 80\% marginal coverage using validation-period calibration residuals only; test coverage is reported without retuning. Deviations from nominal coverage are interpreted as evidence of calibration difficulty under temporal shift and small calibration samples, not as a target corrected using test outcomes. The primary model-selection comparisons are always made within the same forecast window and split.
 
 Robustness checks include rolling-origin folds, leave-one-crop-out validation, and leave-one-region-out validation. Rolling-origin validation tests sensitivity to a single time split. Leave-one-crop-out and leave-one-region-out are intentionally difficult transfer tests. We do not treat them as the main deployment setting, because the intended use case is monitoring crop-region combinations with historical observations. Instead, they identify where the framework is not yet robust enough for unseen-crop or unseen-state generalization.
 
@@ -954,7 +1011,7 @@ Robustness checks include rolling-origin folds, leave-one-crop-out validation, a
 
 \subsection{Lead-Time Skill}
 
-Table~\ref{tab:lead-time} compares the best no-yield-history weather-soil and operational models at each lead time within the internal baseline suite. For each window and feature regime, the displayed model is selected using validation years only, with RMSE as the selection metric. The operational model is already informative at May-Jun, with RMSE 0.719 t/ha and R2 0.677, and remains strongest at May-Oct with RMSE 0.660 t/ha and R2 0.728. This early operational result may be driven substantially by lagged yield and crop-region memory, so it should not be read as early-season weather-only skill. The no-yield-history suite is weaker but still positive, reaching RMSE 0.821 t/ha and R2 0.579 at May-Oct with an SVR-RBF comparator. Its trajectory is not strictly monotonic: later windows add useful weather information but also correlated features and noise in a small state-level panel. We therefore interpret the curve as a monitoring trajectory rather than assuming that every additional month must improve skill. The gap between regimes motivates the central interpretation of the paper: weather and soil provide measurable but secondary monitoring signal, while historical yield memory is a major driver of operational accuracy. A fixed-model lead-time check is included in the separate supplementary material.
+Table~\ref{tab:lead-time} compares the best no-yield-history weather-soil and operational models at each lead time within the internal baseline suite. For each window and feature regime, the displayed model is selected using validation years only, with RMSE as the selection metric. The operational model is already informative at May-Jun, with RMSE 0.719 t/ha and $R^2$ 0.677, and remains strongest at May-Oct with RMSE 0.660 t/ha and $R^2$ 0.728. This early operational result may be driven substantially by lagged yield and crop-region memory, so it should not be read as early-season weather-only skill. The no-yield-history suite is weaker but still positive, reaching RMSE 0.821 t/ha and $R^2$ 0.579 at May-Oct with an SVR-RBF comparator. Its trajectory is not strictly monotonic: later windows add useful weather information but also correlated features and noise in a small state-level panel. We therefore interpret the curve as a monitoring trajectory rather than assuming that every additional month must improve skill. The gap between regimes motivates the central interpretation of the paper: weather and soil provide measurable but secondary monitoring signal, while historical yield memory is a major driver of operational accuracy. A fixed-model lead-time check is included in the separate supplementary material.
 
 \begin{table}[htbp]
 \centering
@@ -991,7 +1048,7 @@ Table~\ref{tab:ablation} summarizes the ablation regimes used to isolate informa
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/fig13_ablation_r2_delta_by_feature_set.png}
-\caption{R2 differences relative to the full operational feature set.}
+\caption{$R^2$ differences relative to the full operational feature set.}
 \label{fig:ablation-delta}
 \end{figure}
 
@@ -1024,7 +1081,7 @@ Risk classification is treated as a decision-support layer rather than the prima
 
 \subsection{Stress Validation}
 
-Table~\ref{tab:validation} summarizes robustness checks using the best model within each validation protocol and feature regime. Values are averaged across the folds and forecast-window rows belonging to each protocol, so the held-out-test row is a stress-validation summary rather than a duplicate of the single May-Oct result in Table~\ref{tab:lead-time}. Rolling-origin performance remains strong, especially for the operational model, suggesting that the headline time-split result is not purely an artifact of one train-test boundary. Leave-one-crop-out is substantially harder for the no-yield-history model, which is expected because crop identity changes the yield scale and sensitivity to weather. Leave-one-region-out produces weak or negative R2. The region-transfer result is the most important limitation: the current framework is better supported for known state-level histories than for unseen-state transfer. This weakness is also consistent with the feature-importance results, where crop-region history and categorical/time structure carry substantial signal.
+Table~\ref{tab:validation} summarizes robustness checks using the best model within each validation protocol and feature regime. Values are averaged across the folds and forecast-window rows belonging to each protocol, so the held-out-test row is a stress-validation summary rather than a duplicate of the single May-Oct result in Table~\ref{tab:lead-time}. Rolling-origin performance remains strong, especially for the operational model, suggesting that the headline time-split result is not purely an artifact of one train-test boundary. Leave-one-crop-out is substantially harder for the no-yield-history model, which is expected because crop identity changes the yield scale and sensitivity to weather. Leave-one-region-out produces weak or negative $R^2$. The region-transfer result is the most important limitation: the current framework is better supported for known state-level histories than for unseen-state transfer. This weakness is also consistent with the feature-importance results, where crop-region history and categorical/time structure carry substantial signal.
 
 \begin{table}[htbp]
 \centering
@@ -1073,7 +1130,7 @@ The analysis is state-level, not farm-level. It does not support field-scale pre
 
 \section{Conclusion}
 
-We presented a stage-aware early-warning benchmark framework for Australian winter crop yield shortfall. The best operational May-Oct model reached RMSE 0.660 t/ha and R2 0.728, while the best no-yield-history weather-soil May-Oct internal-suite model reached RMSE 0.821 t/ha and R2 0.579. The gap between these regimes shows that weather and soil provide measurable but secondary monitoring signal, while historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims. The framework should be recalibrated before use in unseen regions or states.
+We presented a stage-aware early-warning benchmark framework for Australian winter crop yield shortfall. The best operational May-Oct model reached RMSE 0.660 t/ha and $R^2$ 0.728, while the best no-yield-history weather-soil May-Oct internal-suite model reached RMSE 0.821 t/ha and $R^2$ 0.579. The gap between these regimes shows that weather and soil provide measurable but secondary monitoring signal, while historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims. The framework should be recalibrated before use in unseen regions or states.
 
 \begingroup
 \small
@@ -1096,6 +1153,7 @@ def write_main_tex() -> None:
 \usepackage{float}
 \usepackage{placeins}
 \usepackage{lineno}
+\usepackage{textcomp}
 
 \pagenumbering{gobble}
 \hypersetup{
@@ -1118,6 +1176,7 @@ def write_main_tex() -> None:
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
+\newcommand{\Rsq}{R\texttwosuperior}
 \makeatletter
 \let\Ginclude@graphics\@org@Ginclude@graphics
 \setlength{\@fptop}{0pt}
@@ -1151,7 +1210,7 @@ def write_main_tex() -> None:
 \maketitle
 
 \begin{abstract}
-Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a no-yield-history weather-soil setting from an operational yield-history setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best no-yield-history May-Oct internal-suite model reaches RMSE 0.821 t/ha and R2 0.579, while the best operational May-Oct model reaches RMSE 0.660 t/ha and R2 0.728. Ablation and internal baseline-suite comparisons show that weather and soil provide measurable but secondary monitoring information; persistent crop-region structure and lagged yield history account for much of the strongest operational skill. Risk classification and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
+Early warning of crop yield shortfall is useful only when risk can be updated before the season is effectively complete and when forecast skill is not driven by post-harvest leakage. We study Australian winter crops at state level using 966 region-crop-year yield observations from 1989--2021, daily SILO weather, and Soil and Landscape Grid attributes. Daily weather is converted into May-Jun, May-Jul, May-Aug, May-Sep, and May-Oct feature windows. We separate a no-yield-history weather-soil setting from an operational yield-history setting to distinguish within-season environmental signal from persistent crop-region yield memory. On held-out 2017--2021 seasons, the best no-yield-history May-Oct internal-suite model reaches RMSE 0.821 t/ha and $R^2$ 0.579, while the best operational May-Oct model reaches RMSE 0.660 t/ha and $R^2$ 0.728. Ablation and internal baseline-suite comparisons show that weather and soil provide measurable but secondary monitoring information; persistent crop-region structure and lagged yield history account for much of the strongest operational skill. Risk classification and uncertainty diagnostics support the framework as a state-level monitoring tool for known crop-region histories, while clearly limiting causal, farm-level, and unseen-region claims.
 \end{abstract}
 
 \begin{keywords}
@@ -1174,13 +1233,13 @@ We make three contributions. First, we formulate Australian winter-crop forecast
 
 \subsection{Crop Yield Forecasting and Early Warning}
 
-Machine learning is now common in regional crop-yield forecasting, where weather, soil, remote sensing, and management covariates appear across many systems \citep{vanKlompenburg2020systematicReview,paudel2021largeScaleYield}. Because yield panels are often small relative to environmental feature sets, regularized and tree-based tabular models remain strong grain-forecasting baselines \citep{meroni2021smallData}. Recent multi-modal and decision-support benchmarks broaden this landscape \citep{lin2024cropnet,declercq2024indiaRice}; our setting is narrower: state-level Australian winter crops with a fixed May-Oct monitoring calendar.
+Machine learning is now common in regional crop-yield forecasting, where weather, soil, remote sensing, and management covariates appear across many systems \citep{vanKlompenburg2020systematicReview,paudel2021largeScaleYield}. Remote-sensing and neural forecasting studies show how richer image or sequence inputs can improve crop-yield prediction when enough data are available \citep{you2017deepGaussian,khaki2019dnn,khaki2020cnnRnn}. Because yield panels are often small relative to environmental feature sets, regularized and tree-based tabular models remain strong grain-forecasting baselines \citep{meroni2021smallData}. Recent multi-modal and decision-support benchmarks broaden this landscape \citep{lin2024cropnet,declercq2024indiaRice}; our setting is narrower: state-level Australian winter crops with a fixed May-Oct monitoring calendar.
 
-Early-warning studies differ from generic yield prediction because lead time is part of the objective. A model that works only after most weather information is observed may have limited preparedness value, so preseason and early-season crop-failure forecasts evaluate when skill emerges as well as final accuracy \citep{anderson2024preseasonWarning}. We adopt this view by reporting skill separately for each forecast window.
+Early-warning studies differ from generic yield prediction because lead time is part of the objective. Seasonal forecasting reviews and operational early-warning systems emphasize that timing, update frequency, and interpretable warning categories matter alongside final accuracy \citep{basso2019seasonalForecast,rembold2019asap}. A model that works only after most weather information is observed may have limited preparedness value, so preseason and early-season crop-failure forecasts evaluate when skill emerges as well as final accuracy \citep{anderson2024preseasonWarning}. We adopt this view by reporting skill separately for each forecast window.
 
 \subsection{Stage-Aware Weather and Extreme-Event Features}
 
-Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence emphasizes compound hot-dry extremes, crop-specific vulnerability, heterogeneous regional responses, and sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{heino2023hotDryExtremes,sjulgard2023swedenAnomalies,heilemann2024lassoExtremes,kabtih2025hotPluvial}. This motivates stage-aware rather than full-season weather summaries.
+Weather-yield relationships are stage dependent. Developmental-stage studies show that climatic means and weather extremes can have different effects depending on when they occur during crop growth \citep{schierhorn2021developmentalStages}. Broader climate-risk evidence emphasizes high-temperature damages, compound hot-dry extremes, crop-specific vulnerability, heterogeneous regional responses, and sparse or regularized modeling of drought, heat, flooding, and compound hazards \citep{schauberger2017temperature,heino2023hotDryExtremes,sjulgard2023swedenAnomalies,heilemann2024lassoExtremes,kabtih2025hotPluvial}. This motivates stage-aware rather than full-season weather summaries.
 
 \subsection{Interpretability, Uncertainty, and Decision Support}
 \vspace{-0.6em}
@@ -1240,7 +1299,7 @@ Classification models use validation-tuned thresholds for low-yield-risk decisio
 
 The main split trains on 1989--2012, tunes on 2013--2016, and tests on 2017--2021. The test period is not used for scalers, feature thresholds, residual calibration, conformal residuals, expected-yield baselines, weather-deviation baselines, or low-yield-risk thresholds. This temporal split reflects the intended forecasting direction: models learn from earlier seasons and are evaluated on later seasons.
 
-Regression metrics are MAE, RMSE, and R2. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width. The conformal intervals target nominal 80\% marginal coverage using validation-period calibration residuals only; test coverage is reported without retuning. Deviations from nominal coverage are interpreted as evidence of calibration difficulty under temporal shift and small calibration samples, not as a target corrected using test outcomes. The primary model-selection comparisons are always made within the same forecast window and split.
+Regression metrics are MAE, RMSE, and $R^2$. Classification metrics are precision, recall, F1, ROC-AUC, PR-AUC, and Brier score. For probabilistic diagnostics, we summarize interval coverage and width. The conformal intervals target nominal 80\% marginal coverage using validation-period calibration residuals only; test coverage is reported without retuning. Deviations from nominal coverage are interpreted as evidence of calibration difficulty under temporal shift and small calibration samples, not as a target corrected using test outcomes. The primary model-selection comparisons are always made within the same forecast window and split.
 
 Robustness checks include rolling-origin folds, leave-one-crop-out validation, and leave-one-region-out validation. Rolling-origin validation tests sensitivity to a single time split. Leave-one-crop-out and leave-one-region-out are intentionally difficult transfer tests. We do not treat them as the main deployment setting, because the intended use case is monitoring crop-region combinations with historical observations. Instead, they identify where the framework is not yet robust enough for unseen-crop or unseen-state generalization.
 
@@ -1248,9 +1307,9 @@ Robustness checks include rolling-origin folds, leave-one-crop-out validation, a
 
 \subsection{Lead-Time Skill}
 
-The first empirical question is whether the monitoring signal strengthens as the season unfolds, and whether that signal is still visible when yield history is withheld. Table~\ref{tab:lead-time} gives a consistent answer: forecast accuracy improves as later-season information becomes available, and the operational setting outperforms the no-yield-history setting across all forecast windows. By May-Oct, the best operational model reaches RMSE 0.660 t/ha and R2 0.728, while the best no-yield-history model reaches RMSE 0.821 t/ha and R2 0.579.
+The first empirical question is whether the monitoring signal strengthens as the season unfolds, and whether that signal is still visible when yield history is withheld. Table~\ref{tab:lead-time} gives a consistent answer: forecast accuracy improves as later-season information becomes available, and the operational setting outperforms the no-yield-history setting across all forecast windows. By May-Oct, the best operational model reaches RMSE 0.660 t/ha and $R^2$ 0.728, while the best no-yield-history model reaches RMSE 0.821 t/ha and $R^2$ 0.579.
 
-The May-Jun operational result is already informative, with RMSE 0.719 t/ha and R2 0.677, but its interpretation is deliberately bounded. It is not early-season weather-only skill; it combines early weather with crop-region memory. The no-yield-history trajectory is weaker and not strictly monotonic, which is plausible in a small state-level panel where later windows add useful weather information alongside correlated features and noise. We therefore read the lead-time curve as a monitoring trajectory rather than as a guarantee that each additional month must improve every model.
+The May-Jun operational result is already informative, with RMSE 0.719 t/ha and $R^2$ 0.677, but its interpretation is deliberately bounded. It is not early-season weather-only skill; it combines early weather with crop-region memory. The no-yield-history trajectory is weaker and not strictly monotonic, which is plausible in a small state-level panel where later windows add useful weather information alongside correlated features and noise. We therefore read the lead-time curve as a monitoring trajectory rather than as a guarantee that each additional month must improve every model.
 
 \begin{table}[t]
 \centering
@@ -1282,7 +1341,7 @@ Risk classification is useful only if it is framed as triage rather than automat
 
 The stress tests clarify where the benchmark is reliable and where it is not. Rolling-origin validation remains comparatively strong, suggesting that the main temporal holdout result is not driven only by one favorable train-test boundary. Performance declines under harder transfer settings, especially when the model is evaluated on unseen regions. This pattern supports the intended use case of monitoring known crop-region histories while warning against extrapolating the framework to unseen state-level regions without recalibration (Table~\ref{tab:validation}).
 
-Leave-one-crop-out is substantially harder for the no-yield-history model, which is expected because crop identity changes the yield scale and sensitivity to weather. Leave-one-region-out produces weak or negative R2. The region-transfer result is the most important limitation: the current framework is better supported for known state-level histories than for unseen-state transfer. A heatmap view of the same stress-validation summary is included in the supplementary material.
+Leave-one-crop-out is substantially harder for the no-yield-history model, which is expected because crop identity changes the yield scale and sensitivity to weather. Leave-one-region-out produces weak or negative $R^2$. The region-transfer result is the most important limitation: the current framework is better supported for known state-level histories than for unseen-state transfer. A heatmap view of the same stress-validation summary is included in the supplementary material.
 
 \begin{table}[t]
 \centering
@@ -1312,7 +1371,7 @@ These boundaries define the proper deployment setting. The analysis is state-lev
 
 \section{Conclusion}
 
-We presented a stage-aware early-warning benchmark framework for Australian winter crop yield shortfall. The best operational May-Oct model reached RMSE 0.660 t/ha and R2 0.728, while the best no-yield-history weather-soil May-Oct internal-suite model reached RMSE 0.821 t/ha and R2 0.579. The gap between these regimes shows that weather and soil provide measurable but secondary monitoring signal, while historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims. The framework should be recalibrated before use in unseen regions or states.
+We presented a stage-aware early-warning benchmark framework for Australian winter crop yield shortfall. The best operational May-Oct model reached RMSE 0.660 t/ha and $R^2$ 0.728, while the best no-yield-history weather-soil May-Oct internal-suite model reached RMSE 0.821 t/ha and $R^2$ 0.579. The gap between these regimes shows that weather and soil provide measurable but secondary monitoring signal, while historical yield memory is central to the strongest operational forecasts. This supports cautious state-level yield-risk monitoring while clearly bounding farm-level, causal, and unseen-region claims. The framework should be recalibrated before use in unseen regions or states.
 
 \begingroup
 \small
@@ -1333,6 +1392,9 @@ def _write_supplementary_tex_legacy() -> None:
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{float}
+\usepackage{textcomp}
+
+\newcommand{\Rsq}{R\texttwosuperior}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}
@@ -1426,6 +1488,9 @@ def write_supplementary_tex() -> None:
 \usepackage{array}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{textcomp}
+
+\newcommand{\Rsq}{R\texttwosuperior}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}
@@ -1475,7 +1540,7 @@ def write_supplementary_tex() -> None:
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{figures/fig13_ablation_r2_delta_by_feature_set.png}
-\caption{Ablation heatmap showing R2 differences relative to the full operational feature set. Short labels are used to keep the dense comparison readable.}
+\caption{Ablation heatmap showing $R^2$ differences relative to the full operational feature set. Short labels are used to keep the dense comparison readable.}
 \end{figure}
 \FloatBarrier
 
@@ -1562,7 +1627,8 @@ def polish_latex_outputs() -> None:
     tex_files = [PAPER_DIR / "main.tex", PAPER_DIR / "supplementary.tex", *TABLE_DIR.glob("*.tex")]
     for path in tex_files:
         text = path.read_text(encoding="utf-8")
-        text = text.replace("R2", r"$R^2$")
+        text = text.replace("$R^2$", r"\Rsq{}")
+        text = text.replace("R2", r"\Rsq{}")
         path.write_text(text, encoding="utf-8")
 
 
@@ -1636,3 +1702,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
