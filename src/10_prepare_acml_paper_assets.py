@@ -11,6 +11,8 @@ import matplotlib
 import pandas as pd
 
 matplotlib.use("Agg")
+matplotlib.rcParams["pdf.fonttype"] = 42
+matplotlib.rcParams["ps.fonttype"] = 42
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
@@ -164,7 +166,7 @@ def make_data_summary_table() -> None:
         ["Window-expanded panel rows", f"{len(panel):,}"],
         ["Years", f"{panel['year_start'].min()}--{panel['year_start'].max()}"],
         ["Crops", ", ".join(sorted(panel["crop"].unique()))],
-        ["Regions", f"{panel['region'].nunique()} Australian states/territories"],
+        ["Regions", f"{panel['region'].nunique()} Australian states"],
         ["Forecast windows", ", ".join(WINDOW_ORDER)],
         [
             "Split",
@@ -751,9 +753,13 @@ def extract_bibtex_entries_from_docx(path: Path) -> str:
 
 def normalize_bibtex_accents(bib: str) -> str:
     replacements = {
-        r"Fran{\c{c}}ois": r"Fran{\c c}ois",
-        r"Herv{'e}": r"Herv{\'e}",
-        r'M{"u}ller': r'M{\"u}ller',
+        r"Fran{\c{c}}ois": "Francois",
+        r"Fran{\c c}ois": "Francois",
+        r"Herv{'e}": "Herve",
+        r"Herv{\'e}": "Herve",
+        r"Cand{\`e}s": "Candes",
+        r"M{\"u}ller": "Muller",
+        r'M{"u}ller': "Muller",
     }
     for old, new in replacements.items():
         bib = bib.replace(old, new)
@@ -862,6 +868,9 @@ def _write_main_tex_legacy() -> None:
 \usepackage{float}
 \usepackage{lineno}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
 \pagenumbering{gobble}
 \raggedbottom
@@ -885,7 +894,7 @@ def _write_main_tex_legacy() -> None:
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 \makeatletter
 \let\Ginclude@graphics\@org@Ginclude@graphics
 \setlength{\@fptop}{0pt}
@@ -1159,6 +1168,9 @@ def write_main_tex() -> None:
 \usepackage{placeins}
 \usepackage{lineno}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
 \pagenumbering{gobble}
 \hypersetup{
@@ -1181,7 +1193,7 @@ def write_main_tex() -> None:
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 \makeatletter
 \let\Ginclude@graphics\@org@Ginclude@graphics
 \setlength{\@fptop}{0pt}
@@ -1398,8 +1410,11 @@ def _write_supplementary_tex_legacy() -> None:
 \usepackage{array}
 \usepackage{float}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}
@@ -1494,8 +1509,11 @@ def write_supplementary_tex() -> None:
 \usepackage{float}
 \usepackage{placeins}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}

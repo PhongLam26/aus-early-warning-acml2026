@@ -6,8 +6,11 @@
 \usepackage{float}
 \usepackage{placeins}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 
 \hypersetup{hidelinks,colorlinks=false,pdfborder={0 0 0}}
 \renewcommand{\thetable}{S\arabic{table}}

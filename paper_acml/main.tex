@@ -7,6 +7,9 @@
 \usepackage{placeins}
 \usepackage{lineno}
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{accsupp}
 
 \pagenumbering{gobble}
 \hypersetup{
@@ -29,7 +32,7 @@
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
 \newcommand{\cs}[1]{\texttt{\char`\\#1}}
-\newcommand{\Rsq}{R\texttwosuperior}
+\DeclareRobustCommand{\Rsq}{\BeginAccSupp{method=hex,unicode,ActualText=005200B2}\ensuremath{R^2}\EndAccSupp{}}
 \makeatletter
 \let\Ginclude@graphics\@org@Ginclude@graphics
 \setlength{\@fptop}{0pt}
