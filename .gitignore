@@ -17,6 +17,7 @@ results/
 .vscode/
 
 # LaTeX build artifacts
+paper_acml/
 paper_acml/*.aux
 paper_acml/*.bbl
 paper_acml/*.blg
@@ -30,6 +31,10 @@ paper_acml/main_checklist.*
 paper_acml/main_layout_fixed.*
 paper_acml/layout_check_page-*.png
 paper_acml/acml26_submission_template.pdf
+outputs/reports/acml2026_aus_early_warning_anonymous.pdf
+outputs/reports/acml2026_aus_early_warning_anonymous_source.zip
+outputs/reports/acml2026_aus_early_warning_openreview_package.zip
+outputs/reports/acml2026_aus_early_warning_supplementary.pdf
 
 # Large or redundant generated snapshots
 outputs/safe_versions/

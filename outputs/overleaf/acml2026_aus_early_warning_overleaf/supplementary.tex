@@ -47,6 +47,12 @@
 
 \begin{table}[H]
 \centering
+\caption{Detailed validation-selected lead-time performance by forecast window for the no-yield-history weather-soil and operational regimes. This table provides the numeric rows summarized by the main-paper lead-time RMSE comparison figure.}
+\resizebox{\textwidth}{!}{\input{tables/table_lead_time.tex}}
+\end{table}
+
+\begin{table}[H]
+\centering
 \caption{Feature groups used for stage-aware early-warning models.}
 \resizebox{\textwidth}{!}{\input{tables/table_feature_groups.tex}}
 \end{table}
@@ -74,13 +80,19 @@
 
 \input{tables/table_baselines_full_appendix.tex}
 
-Full baseline-suite metrics remain available in the accompanying CSV artifacts; the PDF keeps the compact summary to preserve readability.
+All-window baseline-suite metrics remain available in the accompanying CSV artifacts; the PDF reports the full May-Oct suite to keep the comparison readable.
+
+\begin{table}[H]
+\centering
+\caption{Detailed stress-validation summary by validation protocol and feature regime. Rows report mean performance across the folds and forecast windows belonging to each protocol; the held-out-test row is an all-window stress summary, not the May-Oct-only result in the main lead-time comparison.}
+\resizebox{\textwidth}{!}{\input{tables/table_validation.tex}}
+\end{table}
 
 \section{Data and Implementation Details}
 
 The raw yield source is the ABARES Australian Crop Report state-crop-data workbook \path{03_AustCropRpt20260303_StateCropData_v1.0.0.xlsx}, accessed on 4 July 2026; the modeled panel is the derived \texttt{yield\_panel.csv}. Fields used are crop area, production, and yield in tonnes per hectare, filtered to the five winter crops and six state-level regions in the main paper. The harvest year is represented by \texttt{year\_start}. Production and area are retained for audit but excluded from model features.
 
-SILO/LongPaddock weather inputs are daily rainfall, maximum and minimum temperature, radiation, evaporation, and vapor pressure. They are aggregated from May through each forecast cutoff. The benchmark uses state-level regional daily series as a monitoring exposure proxy; latitude and longitude metadata are retained, but no crop-area-weighted gridded exposure is claimed. Weather-deviation features use training years only: for feature value $x_{r,w,t}$, the deviation is $x_{r,w,t}-\bar{x}_{r,w}^{train}$ for the same region and forecast window. Soil/ASRIS attributes are static regional background covariates from the Soil and Landscape Grid of Australia, including available water capacity, texture, bulk density, soil organic carbon, nutrients, pH, cation exchange capacity, and depth variables. These features condition regional vulnerability and may partly proxy region identity.
+SILO/LongPaddock weather inputs are daily rainfall, maximum and minimum temperature, radiation, evaporation, and vapor pressure. They are aggregated from May through each forecast cutoff. The system uses state-level regional daily series as a monitoring exposure proxy; latitude and longitude metadata are retained, but no crop-area-weighted gridded exposure is claimed. Weather-deviation features use training years only: for feature value $x_{r,w,t}$, the deviation is $x_{r,w,t}-\bar{x}_{r,w}^{train}$ for the same region and forecast window. Soil/ASRIS attributes are static regional background covariates from the Soil and Landscape Grid of Australia, including available water capacity, texture, bulk density, soil organic carbon, nutrients, pH, cation exchange capacity, and depth variables. These features condition regional vulnerability and may partly proxy region identity.
 
 The no-yield-history regime has 73 predictors before one-hot expansion: crop, state-level region, year, 30 stage-weather summaries, 18 train-derived weather-deviation features, and 22 soil background attributes after excluding coordinate metadata. The operational regime adds one-year lag, three-year rolling past mean, and expanding past mean, for 76 predictors before one-hot expansion. Scaling, imputation, encoders, baselines, thresholds, and conformal residuals are fitted without test years; one-hot encoders handle unknown categories in stress tests. Configured weather thresholds are rain day 1 mm, heavy rain 10/25 mm, heat 25/30/35 C, frost 0 C, cold 5 C, and high evaporation 5 mm.
 

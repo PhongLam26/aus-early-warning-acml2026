@@ -1,0 +1,16 @@
+\begin{tabular}{lllllrr}
+\toprule
+Group & Model & Regime & Yield hist. & Role & May-Oct RMSE & May-Oct \Rsq{} \\
+\midrule
+Historical & 3-year rolling mean & Past-only yield & Yes & memory baseline & 0.779 & 0.622 \\
+Historical & Previous-year yield & Past-only yield & Yes & last-year persistence & 0.784 & 0.616 \\
+Historical & Crop-region train trend & Past-only yield & Yes & train-only trend & 0.823 & 0.577 \\
+Classical ML & SVR-RBF & NYH weather-soil & No & kernel NYH comparator & 0.821 & 0.579 \\
+Strong tabular ML & XGBoost & NYH weather-soil & No & boosted NYH comparator & 0.888 & 0.508 \\
+Interpretable ML & GAM & NYH weather-soil & No & additive comparator & 1.045 & 0.318 \\
+Sequence & DailyWeather-GRU & Daily sequence NYH & No & daily-seq NYH & 1.020 & 0.350 \\
+Sequence & DailyWeather-GRU & Daily sequence operational & Yes & daily-seq operational & 0.718 & 0.678 \\
+Strong tabular ML & CatBoost & Operational & Yes & boosted operational & 0.778 & 0.622 \\
+Classical ML & Ridge & Operational & Yes & best operational & 0.660 & 0.728 \\
+\bottomrule
+\end{tabular}
